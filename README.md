@@ -6,7 +6,7 @@
 
   ![Progress](https://img.shields.io/badge/100%25%20Completed-brightgreen)
 
-- **Unit 2: C Programming** 
+- [**Unit 2: C Programming**]((./Unit2_C_Programming/)) 
 
   ![Progress](https://img.shields.io/badge/90%25%20Completed-green)
 
