@@ -53,11 +53,13 @@
 
 # 📊 Overall Progress ![Stars](https://img.shields.io/badge/Stars-1%20%2F%205-red)
 
-[![Dashboard](https://img.shields.io/badge/🚀_My_Dashboard-View_Now-0A66C2?style=for-the-badge)](https://www.learn-in-depth-store.com/certificate/adel.shata.eng%40gmail.com)
 
+<p align="center">
+  <a href="https://www.learn-in-depth-store.com/certificate/adel.shata.eng%40gmail.com">
+    <img src="https://img.shields.io/badge/⚡_MY_DASHBOARD-111111?style=for-the-badge&logo=vercel&logoColor=white&labelColor=000000" />
+  </a>
+</p>
 
-
-
-
-
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Adel-Shata/portfolio-assets/main/Images/Mastering-Embedded-Systems/Certificate/FistStar/FirstStar.png" width="800"/>
+</p>
