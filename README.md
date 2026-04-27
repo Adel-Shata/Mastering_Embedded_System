@@ -61,5 +61,5 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Adel-Shata/portfolio-assets/main/Images/Mastering-Embedded-Systems/Certificate/FistStar/FirstStar.png" width="800"/>
+  <img src="https://raw.githubusercontent.com/Adel-Shata/portfolio-assets/refs/heads/main/Images/Mastering-Embedded-Systems/Certificate/FistStar/First%20Star.png?token=GHSAT0AAAAAAD3UP757VBZCWOW6HNUTMKEM2PP43NA" width="800"/>
 </p>
