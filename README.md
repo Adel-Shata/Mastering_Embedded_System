@@ -51,7 +51,7 @@
 ---
 <br>
 
-# 📊 Overall Progress ![Stars](https://img.shields.io/badge/Stars-0%20%2F%205-red)
+# 📊 Overall Progress ![Stars](https://img.shields.io/badge/Stars-1%20%2F%205-red)
 
 
 
