@@ -1,6 +1,6 @@
 # Mastering_Embedded_System
 
-## 📘 First Term ![In Progress](https://img.shields.io/badge/In%20Progress-38%25-yellow)
+## 📘 First Term ![In Progress](https://img.shields.io/badge/In%20Progress-40%25-yellow)
 
 - **Unit 1: Introduction** 
 
@@ -8,10 +8,10 @@
 
 - [**Unit 2: C Programming**](./Unit2_C_Programming/) 
 
-  ![Progress](https://img.shields.io/badge/90%25%20Completed-green)
+  ![Progress](https://img.shields.io/badge/100%25%20Completed-brightgreen)
 
 - **Unit 3: Embedded C**  
-  ![Progress](https://img.shields.io/badge/0%25%20Completed-red)
+  ![Progress](https://img.shields.io/badge/1%25%20Completed-orange)
 
 - **Unit 4: System Architecture**  
   ![Progress](https://img.shields.io/badge/0%25%20Completed-red)
@@ -51,7 +51,7 @@
 ---
 <br>
 
-# 📊 Overall Progress ![Stars](https://img.shields.io/badge/Stars-1%20%2F%205-red)
+# 📊 Overall Progress ![Stars](https://img.shields.io/badge/Stars-1%20%2F%205-orange)
 
 
 <p align="center">
@@ -61,5 +61,5 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/Adel-Shata/portfolio-assets/raw/main/Images/Mastering-Embedded-Systems/Certificate/FirstStar/FirstStarCertificate.png" width="800"/>
+  <img src="https://raw.githubusercontent.com/Adel-Shata/Mastering_Embedded_System/main/Certificates/FirstStar/FirstStarCertificate.png" width="800"/>
 </p>
