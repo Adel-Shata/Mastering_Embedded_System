@@ -1,3 +1,9 @@
+/*
+ *Name:         Platform_Types.h
+ *Author:       Adel Shata
+ */
+
+
 #ifndef PLATFORM_TYPES_H_
 #define PLATFORM_TYPES_H_
 /*
@@ -50,6 +56,7 @@ typedef int32_t                         sint32;
 typedef uint32_t                        uint32;
 typedef int64_t                         sint64;
 typedef uint64_t                        uint64;
+
 typedef float                           float32_t;
 typedef double                          double64_t;
 
@@ -60,6 +67,7 @@ typedef volatile int32_t                vint32_t;
 typedef volatile uint32_t               vuint32_t;
 typedef volatile int64_t                vint64_t;
 typedef volatile uint64_t               vuint64_t;
+
 typedef volatile float                  vfloat32_t;
 typedef volatile double                 vdouble64_t;
 
