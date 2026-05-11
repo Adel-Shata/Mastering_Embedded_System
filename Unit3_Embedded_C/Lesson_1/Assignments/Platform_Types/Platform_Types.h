@@ -36,7 +36,7 @@
 #endif
 
 #ifndef TRUE
-#define FALSE (_Bool)true
+#define TRUE (_Bool)true
 #endif
 
 /*
