@@ -36,7 +36,7 @@ int main(void) {
 		printf("Employee n.%d:\nName: %s\nId: %d\n", i+1, (*(*ptr + i))->name, (*(*ptr + i))->id);
 
 	printf("\n=================================\n"
-		   "\nstruct SEmployee **ptr1\n");
+		   "\nUsing struct SEmployee **ptr1\n");
 	for(i = 0; i < 3; i++)
 		printf("Employee n.%d:\nName: %s\nId: %d\n", i+1, (*(ptr1 + i))->name, (*(ptr1 + i))->id);
 
