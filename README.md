@@ -11,12 +11,15 @@
   ![Progress](https://img.shields.io/badge/100%25%20Completed-brightgreen)
 
 - [**Unit 3: Embedded C**](./Unit3_Embedded_C/)
-  ![Progress](https://img.shields.io/badge/1%25%20Completed-orange)
+
+  ![Progress](https://img.shields.io/badge/30%25%20Completed-orange)
 
 - **Unit 4: System Architecture**  
+
   ![Progress](https://img.shields.io/badge/0%25%20Completed-red)
 
 - **Unit 5: First Term Projects**  
+
   ![Progress](https://img.shields.io/badge/0%25%20Completed-red)
 
 <br>
