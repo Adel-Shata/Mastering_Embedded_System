@@ -1,0 +1,119 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flash            0x08000000         0x00020000         xr
+sram             0x20000000         0x00005000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x08000000      0x150
+ *(.vectors*)
+ .vectors       0x08000000       0x44 build/objs/startup/startup.o
+                0x08000000                vectors
+ *(.text*)
+ .text          0x08000044       0x90 build/objs/startup/startup.o
+                0x08000044                ExternalInterruptsHandler
+                0x08000044                HardFault_Handler
+                0x08000044                SysTick_Handler
+                0x08000044                PendSV_Handler
+                0x08000044                NMI_Handler
+                0x08000044                UsageFault_Handler
+                0x08000044                Reset_Handler
+                0x08000044                SVC_Handler
+                0x08000044                BusFault_Handler
+                0x08000044                MemoryManagement_Handler
+ .text          0x080000d4       0x78 build/objs/src/App.o
+                0x080000d4                main
+ *(.rodata*)
+ .rodata        0x0800014c        0x3 build/objs/src/App.o
+                0x0800014c                g_const_vars
+                0x08000150                        . = ALIGN (0x4)
+ *fill*         0x0800014f        0x1 
+                0x08000150                        _E_text = .
+
+.glue_7         0x08000150        0x0
+ .glue_7        0x08000150        0x0 linker stubs
+
+.glue_7t        0x08000150        0x0
+ .glue_7t       0x08000150        0x0 linker stubs
+
+.vfp11_veneer   0x08000150        0x0
+ .vfp11_veneer  0x08000150        0x0 linker stubs
+
+.v4_bx          0x08000150        0x0
+ .v4_bx         0x08000150        0x0 linker stubs
+
+.iplt           0x08000150        0x0
+ .iplt          0x08000150        0x0 build/objs/startup/startup.o
+
+.rel.dyn        0x08000150        0x0
+ .rel.iplt      0x08000150        0x0 build/objs/startup/startup.o
+
+.data           0x20000000        0x4 load address 0x08000150
+                0x20000000                        _S_data = .
+ *(.data*)
+ .data          0x20000000        0x0 build/objs/startup/startup.o
+ .data          0x20000000        0x3 build/objs/src/App.o
+                0x20000000                g_vars
+                0x20000004                        . = ALIGN (0x4)
+ *fill*         0x20000003        0x1 
+                0x20000004                        _E_data = .
+
+.igot.plt       0x20000004        0x0 load address 0x08000154
+ .igot.plt      0x20000004        0x0 build/objs/startup/startup.o
+
+.bss            0x20000004        0x0 load address 0x08000154
+                0x20000004                        _S_bss = .
+ *(.bss*)
+ .bss           0x20000004        0x0 build/objs/startup/startup.o
+ .bss           0x20000004        0x0 build/objs/src/App.o
+                0x20000004                        . = ALIGN (0x4)
+                0x20000004                        _E_bss = .
+                0x200003ec                        _stack_top = (. + 0x3e8)
+LOAD build/objs/startup/startup.o
+LOAD build/objs/src/App.o
+OUTPUT(build/output.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000      0x3a5
+ .debug_info    0x00000000      0x1b8 build/objs/startup/startup.o
+ .debug_info    0x000001b8      0x1ed build/objs/src/App.o
+
+.debug_abbrev   0x00000000      0x1f4
+ .debug_abbrev  0x00000000       0xdd build/objs/startup/startup.o
+ .debug_abbrev  0x000000dd      0x117 build/objs/src/App.o
+
+.debug_aranges  0x00000000       0x40
+ .debug_aranges
+                0x00000000       0x20 build/objs/startup/startup.o
+ .debug_aranges
+                0x00000020       0x20 build/objs/src/App.o
+
+.debug_line     0x00000000      0x288
+ .debug_line    0x00000000      0x15b build/objs/startup/startup.o
+ .debug_line    0x0000015b      0x12d build/objs/src/App.o
+
+.debug_str      0x00000000      0x1cb
+ .debug_str     0x00000000      0x167 build/objs/startup/startup.o
+                                0x1b7 (size before relaxing)
+ .debug_str     0x00000167       0x64 build/objs/src/App.o
+                                0x1b7 (size before relaxing)
+
+.comment        0x00000000       0x55
+ .comment       0x00000000       0x55 build/objs/startup/startup.o
+                                 0x56 (size before relaxing)
+ .comment       0x00000055       0x56 build/objs/src/App.o
+
+.ARM.attributes
+                0x00000000       0x2d
+ .ARM.attributes
+                0x00000000       0x2d build/objs/startup/startup.o
+ .ARM.attributes
+                0x0000002d       0x2d build/objs/src/App.o
+
+.debug_frame    0x00000000       0x60
+ .debug_frame   0x00000000       0x34 build/objs/startup/startup.o
+ .debug_frame   0x00000034       0x2c build/objs/src/App.o

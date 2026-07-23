@@ -1,0 +1,5 @@
+08000050 t _reset
+08000056 t _vector_handler
+080000d4 T g_const_vars
+080000d8 D g_vars
+0800005c T main
