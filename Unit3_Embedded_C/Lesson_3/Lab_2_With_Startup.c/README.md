@@ -456,29 +456,6 @@ flowchart TD
 
 ---
 
-## Future Improvements
-
-1. **System clock configuration** — Add PLL and clock tree setup to achieve the STM32F103's 72 MHz maximum speed. Currently runs at the default 8 MHz HSI.
-
-2. **SysTick-based delay** — Replace busy-wait loops with `SysTick` timer interrupts for precise, predictable timing.
-
-3. **Fault handler implementations** — Add dedicated `HardFault_Handler` with infinite loop and optional LED blink pattern for fault indication.
-
-4. **STM32F103 register definitions** — Create a header with named register/bit-field definitions (or use an SVD-based register description) to replace raw hex addresses.
-
-5. **Separate debug/release builds** — Add `-O2` for release and `-O0 -g` for debug build configurations.
-
-6. **Subdirectory source support** — Update the Makefile's `wildcard` to recursively discover `.c` files in subdirectories.
-
-7. **Dependency tracking** — Add automatic header dependency generation (`-MMD -MP` flags) so changes to `.h` files trigger recompilation.
-
-8. **Include path for startup** — The current `CFLAGS` only includes `inc/`. If startup files need headers from other directories, the include path must be updated.
-
-9. **Linker script stack size** — The stack is currently set to 1000 bytes (`. = . + 1000`). For production code, this should be sized based on actual stack usage analysis.
-
-10. **Startup `.data` and `.bss` size calculation** — Consider using `SIZEOF(.data)` and `SIZEOF(.bss)` in the linker script for more robust section size computation.
-
----
 
 ## Memory Layout (STM32F103)
 

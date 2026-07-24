@@ -479,30 +479,6 @@ The startup directory supports both `.c` and `.s` files. To add a custom assembl
 
 ---
 
-## Future Improvements
-
-1. **Linker-derived stack pointer** — Define `_stack_top` in the linker script and reference it from the assembly vector table, instead of hardcoding `0x20001000`.
-
-2. **Add `.data` relocation** — Implement a `_data_init` routine in assembly to copy `.data` from FLASH to SRAM, and add the necessary linker symbols.
-
-3. **Add `.bss` zeroing** — Implement a `_bss_init` routine in assembly to zero the `.bss` section.
-
-4. **System clock configuration** — Add PLL and clock tree setup to achieve the STM32F103's 72 MHz maximum speed. Currently runs at the default 8 MHz HSI.
-
-5. **SysTick-based delay** — Replace busy-wait loops with `SysTick` timer interrupts for precise, predictable timing.
-
-6. **Fault handler implementations** — Add dedicated `HardFault_Handler` with infinite loop and optional LED blink pattern for fault indication.
-
-7. **STM32F103 register definitions** — Create a header with named register/bit-field definitions (or use an SVD-based register description) to replace raw hex addresses.
-
-8. **Separate debug/release builds** — Add `-O2` for release and `-O0 -g` for debug build configurations.
-
-9. **Subdirectory source support** — Update the Makefile's `wildcard` to recursively discover `.c` files in subdirectories.
-
-10. **Dependency tracking** — Add automatic header dependency generation (`-MMD -MP` flags) so changes to `.h` files trigger recompilation.
-
----
-
 ## Memory Layout (STM32F103)
 
 ```
