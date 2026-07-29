@@ -2,7 +2,7 @@
 
 # The TOOLCHAIN variable can be overridden by setting it in the environment or on the command line when invoking make.
 
-TOOLCHAIN 	   ?= C:/TOOLCHAINS/ARM_TOOLCHAIN/bin/arm-none-eabi-
+TOOLCHAIN 	   ?= C:/Tools/TOOLCHAIN/ARM_TOOLCHAIN/bin/arm-none-eabi-
 
 # Tools Aabstraction layer
 
@@ -26,7 +26,7 @@ CFLAGS     = -c
 CFLAGS    += -Wall -Wextra -Werror
 
 # Specify the target CPU architecture.
-CFLAGS    += -mcpu=cortex-m3 
+CFLAGS    += -mcpu=cortex-m4 
 
 # Enable debugging information in the output.
 CFLAGS    += -g -gdwarf-3
@@ -40,7 +40,7 @@ CFLAGS    += -I $(strip $(INCLUDES))
 ## 	Assembler flags for assembly files.
 
 # Specify the target CPU architecture for the assembler.
-ASFLAGS    = -mcpu=cortex-m3
+ASFLAGS    = -mcpu=cortex-m4
 
 # Enable debugging information in the output of the assembler.
 ASFLAGS   += -g -gdwarf-2

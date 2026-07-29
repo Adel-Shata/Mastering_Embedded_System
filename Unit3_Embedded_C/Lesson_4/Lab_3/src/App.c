@@ -20,17 +20,22 @@ int main(void)
 	// Enable the GPIO port
 	*((vuint32 *)(SYSCTL_RCGC2_R))           = 0X20  ;
 	
+	//delay to make sure GPIOF is up correctly
+	for(uint32 counter = 0 ; counter < 200 ; counter++);
+	
 	// Set (PF3) the direction as output
-	*((vuint32 *)(GPIO_PORTF_BASE + 0X3FC)) |= (1<<3);
+	*((vuint32 *)(GPIO_PORTF_BASE + 0X400)) |= (1<<3);
 
 	// Enable the GPIO pin
-	*((vuint32 *)(GPIO_PORTF_BASE + 0X400)) |= (1<<3);
+	*((vuint32 *)(GPIO_PORTF_BASE + 0X51C)) |= (1<<3);
 	
-	// Toggling the led
-	for(uint32 counter = 0 ; counter < 20000 ; counter++);
-	*((vuint32 *)(GPIO_PORTF_BASE + 0X400)) ^= (1<<3);
-	for(uint32 counter = 0 ; counter < 20000 ; counter++);
-	*((vuint32 *)(GPIO_PORTF_BASE + 0X400)) ^= (1<<3);
+	while(1){
+		// Toggling the led
+		for(uint32 counter = 0 ; counter < 20000 ; counter++);
+		*((vuint32 *)(GPIO_PORTF_BASE + 0X3FC)) ^= (1<<3);
+		for(uint32 counter = 0 ; counter < 20000 ; counter++);
+		*((vuint32 *)(GPIO_PORTF_BASE + 0X3FC)) ^= (1<<3);
+	}
 
 
 	return 0;
