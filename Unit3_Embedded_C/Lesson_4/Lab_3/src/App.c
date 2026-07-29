@@ -31,10 +31,10 @@ int main(void)
 	
 	while(1){
 		// Toggling the led
-		for(uint32 counter = 0 ; counter < 20000 ; counter++);
 		*((vuint32 *)(GPIO_PORTF_BASE + 0X3FC)) ^= (1<<3);
 		for(uint32 counter = 0 ; counter < 20000 ; counter++);
 		*((vuint32 *)(GPIO_PORTF_BASE + 0X3FC)) ^= (1<<3);
+		for(uint32 counter = 0 ; counter < 20000 ; counter++);
 	}
 
 
