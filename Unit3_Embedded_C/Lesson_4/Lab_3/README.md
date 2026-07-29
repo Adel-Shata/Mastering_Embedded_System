@@ -9,9 +9,9 @@ The firmware blinks the onboard RGB LED (PF3 — green) on the TM4C123G LaunchPa
 ## 🎥 Demo
 
 <p align="center">
-  <a href="./Running.mp4">
+  <a href="https://youtu.be/htVo_oY_ISA">
     <img
-        src="./docs/images/demo-thumbnail.png"
+        src="https://img.youtube.com/vi/htVo_oY_ISA/maxresdefault.jpg"
         alt="Project Demo"
         width="900">
   </a>
@@ -101,8 +101,6 @@ flowchart TD
 
     A --> H["📁 linker"]
     H --> H1["📄 linkerscript.ld"]
-
-    A --> V["🎬 Running.mp4"]
 
     A --> I["📁 build"]
 
@@ -300,8 +298,6 @@ flowchart TD
 
     A --> H["📁 linker"]
     H --> H1["📄 linkerscript.ld"]
-
-    A --> V["🎬 Running.mp4"]
 
     A --> I["📁 build"]
 
