@@ -9,12 +9,7 @@ The firmware blinks the onboard RGB LED (PF3 — green) on the TM4C123G LaunchPa
 ## 🎥 Demo
 
 <p align="center">
-  <a href="./Running.mp4">
-    <img
-        src="./docs/images/demo-thumbnail.png"
-        alt="Project Demo"
-        width="900">
-  </a>
+  <video src="./Running.mp4" poster="./docs/images/demo-thumbnail.png" controls width="900"></video>
 </p>
 
 <p align="center">
