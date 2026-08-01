@@ -6,6 +6,12 @@ The firmware blinks the onboard LED (PA13) using direct register manipulation, p
 
 ---
 
+## 🎥 Demo
+
+▶ **Watch the demonstration on YouTube:** [https://youtu.be/CR9gibXqalM](https://youtu.be/CR9gibXqalM)
+
+---
+
 ## Features
 
 - **Bare-metal register access** — no HAL, no CMSIS, no SDK dependencies
@@ -22,32 +28,40 @@ The firmware blinks the onboard LED (PA13) using direct register manipulation, p
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────┐
-│                    Application Layer                 │
-│                     src/App.c                        │
-│          GPIO init + LED toggle main loop            │
-└──────────────────────┬──────────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────────┐
-│                   Startup Layer                      │
-│                  startup/startup.c                   │
-│    Vector table (.vectors) ─► Reset_Handler          │
-│    .data copy ─► .bss zero ─► main()                │
-└──────────────────────┬──────────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────────┐
-│              Linker Script Layer                     │
-│             linker/linkerscript.ld                   │
-│    MEMORY regions ─► SECTIONS layout                │
-│    Symbol exports: _E_text, _S_data, _E_data, etc.  │
-└──────────────────────┬──────────────────────────────┘
-                       │
-┌──────────────────────▼──────────────────────────────┐
-│              Type Abstraction Layer                  │
-│              inc/Platform_Types.h                    │
-│    Fixed-width types, volatile types, booleans      │
-└─────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph APP["🚀 Application Layer"]
+        A1["📄 src/App.c"]
+        A2["GPIO init + LED toggle main loop"]
+    end
+
+    subgraph STARTUP["⚙️ Startup Layer"]
+        S1["📄 startup/startup.c"]
+        S2["Vector table (.vectors)"]
+        S3["Reset_Handler"]
+        S4[".data copy → .bss zero → main()"]
+    end
+
+    subgraph LINKER["📦 Linker Script Layer"]
+        L1["📄 linker/linkerscript.ld"]
+        L2["MEMORY regions"]
+        L3["SECTIONS layout"]
+        L4["Symbol exports: _E_text, _S_data, _E_data..."]
+    end
+
+    subgraph TYPES["🧩 Type Abstraction Layer"]
+        T1["📄 inc/Platform_Types.h"]
+        T2["Fixed-width types"]
+        T3["Volatile types"]
+        T4["Booleans"]
+    end
+
+    APP --> STARTUP --> LINKER --> TYPES
+
+    style APP fill:#1e40af,stroke:#3b82f6,color:#fff
+    style STARTUP fill:#065f46,stroke:#10b981,color:#fff
+    style LINKER fill:#92400e,stroke:#f59e0b,color:#fff
+    style TYPES fill:#581c87,stroke:#a855f7,color:#fff
 ```
 
 **Design philosophy:** Each layer has a single responsibility. The startup code never touches application logic. The linker script never assumes section content. The build system abstracts the toolchain entirely.
@@ -126,28 +140,52 @@ make TOOLCHAIN=/opt/gcc-arm/bin/arm-none-eabi-
 
 ### Build Flow
 
-```
-┌──────────────┐     ┌──────────────┐
-│  App.c       │     │  startup.c   │
-│  (src/)      │     │  (startup/)  │
-└──────┬───────┘     └──────┬───────┘
-       │ gcc -c              │ gcc -c
-       ▼                     ▼
-┌──────────────┐     ┌──────────────┐
-│  App.o       │     │  startup.o   │
-└──────┬───────┘     └──────┬───────┘
-       │                     │
-       └─────────┬───────────┘
-                 │ ld -T linkerscript.ld
-                 ▼
-          ┌──────────────┐
-          │  output.elf  │
-          └──────┬───────┘
-                 │
-       ┌─────────┼──────────┬───────────────┬─────────────────┐
-       │         │          │               │                 │
-       ▼         ▼          ▼               ▼                 ▼
-   output.bin output.hex readelf.txt disassembly.txt symbols.txt
+```mermaid
+flowchart TD
+    subgraph SRC["📄 Source Files"]
+        S1["src/App.c"]
+        S2["startup/startup.c"]
+    end
+
+    subgraph COMP["⚙️ Compilation"]
+        C1["gcc -c"]
+        C2["gcc -c"]
+    end
+
+    subgraph OBJ["📦 Object Files"]
+        O1["App.o"]
+        O2["startup.o"]
+    end
+
+    subgraph LINK["🔗 Linking"]
+        L1["ld -T linkerscript.ld"]
+    end
+
+    subgraph ELF["📦 ELF Output"]
+        E1["output.elf"]
+    end
+
+    subgraph POST["📤 Post-Processing"]
+        P1["objcopy → output.bin"]
+        P2["objcopy → output.hex"]
+        P3["readelf → readelf.txt"]
+        P4["objdump → disassembly.txt"]
+        P5["nm → symbols.txt"]
+    end
+
+    S1 --> C1 --> O1
+    S2 --> C2 --> O2
+    O1 --> L1
+    O2 --> L1
+    L1 --> E1
+    E1 --> POST
+
+    style SRC fill:#1e40af,stroke:#3b82f6,color:#fff
+    style COMP fill:#065f46,stroke:#10b981,color:#fff
+    style OBJ fill:#92400e,stroke:#f59e0b,color:#fff
+    style LINK fill:#581c87,stroke:#a855f7,color:#fff
+    style ELF fill:#be123c,stroke:#f43f5e,color:#fff
+    style POST fill:#1e3a5f,stroke:#60a5fa,color:#fff
 ```
 
 ### Output Folders
@@ -459,20 +497,44 @@ flowchart TD
 
 ## Memory Layout (STM32F103)
 
-```
-FLASH (128 KB)                    SRAM (20 KB)
-┌─────────────────────┐           ┌─────────────────────┐
-│ 0x08000000          │           │ 0x20000000          │
-│  .vectors (68 B)    │           │  .data    (4 B)     │
-│  .text    (112 B)   │           │  .bss     (0 B)     │
-│  .rodata  (3 B)     │           │          ...        │
-│          ...        │           │                     │
-│                     │           │                     │
-│                     │           │ 0x200003EC          │
-│                     │           │  _stack_top         │
-│                     │           │  (1000 B stack)     │
-│ 0x0801FFFF          │           │ 0x20004FFF          │
-└─────────────────────┘           └─────────────────────┘
+```mermaid
+block-beta
+    columns 2
+
+    block:FLASH:1
+        columns 1
+        F1["📦 FLASH (128 KB)\n0x08000000"]
+        F2["📄 .vectors (68 B)\nInterrupt Vector Table"]
+        F3["📄 .text (112 B)\nApplication Code"]
+        F4["📄 .rodata (3 B)\nConstant Data"]
+        F5["📄 .data (load, 4 B)"]
+        F6["📄 0x0801FFFF"]
+    end
+
+    block:SRAM:1
+        columns 1
+        S1["📦 SRAM (20 KB)\n0x20000000"]
+        S2["📄 .data (4 B)\nInitialized Variables"]
+        S3["📄 .bss (0 B)\nZero-initialized Data"]
+        S4["📚 stack\n(1000 B)"]
+        S5["📍 _stack_top\n0x200003EC"]
+        S6["📄 0x20004FFF"]
+    end
+
+    style FLASH fill:#dc2626,stroke:#ef4444,color:#fff
+    style SRAM fill:#2563eb,stroke:#3b82f6,color:#fff
+    style F1 fill:#991b1b,stroke:#dc2626,color:#fff
+    style F2 fill:#7f1d1d,stroke:#991b1b,color:#fff
+    style F3 fill:#7f1d1d,stroke:#991b1b,color:#fff
+    style F4 fill:#7f1d1d,stroke:#991b1b,color:#fff
+    style F5 fill:#7f1d1d,stroke:#991b1b,color:#fff
+    style F6 fill:#7f1d1d,stroke:#991b1b,color:#fff
+    style S1 fill:#1e40af,stroke:#2563eb,color:#fff
+    style S2 fill:#1e3a5f,stroke:#1e40af,color:#fff
+    style S3 fill:#1e3a5f,stroke:#1e40af,color:#fff
+    style S4 fill:#1e3a5f,stroke:#1e40af,color:#fff
+    style S5 fill:#1e3a5f,stroke:#1e40af,color:#fff
+    style S6 fill:#1e3a5f,stroke:#1e40af,color:#fff
 ```
 
 | Symbol | Address | Description |
@@ -491,25 +553,36 @@ FLASH (128 KB)                    SRAM (20 KB)
 
 ## Startup Sequence
 
-```
-Power-On / Reset
-       │
-       ▼
-CPU reads SP from vectors[0] (0x200003EC)
-       │
-       ▼
-CPU reads PC from vectors[1] → Reset_Handler (0x08000044)
-       │
-       ▼
-Reset_Handler:
-  1. Copy .data from FLASH (_E_text) to SRAM (_S_data → _E_data)
-  2. Zero .bss in SRAM (_S_bss → _E_bss)
-  3. Call main()
-       │
-       ▼
-main():
-  1. Enable GPIOA clock (RCC_APB2ENR |= (1 << 2))
-  2. Configure PA13 as push-pull output (GPIOA_CHR)
-  3. Enter infinite loop: toggle PA13 with delay
+```mermaid
+flowchart TD
+    A["🔌 Power-On / Reset"] --> B["📖 CPU reads SP from vectors[0]\n(0x200003EC, _stack_top)"]
+    B --> C["📖 CPU reads PC from vectors[1]\n→ Reset_Handler (0x08000044)"]
+    C --> D
+
+    subgraph RESET["⚙️ Reset_Handler"]
+        R1["📄 Copy .data from FLASH to SRAM\n(_S_data → _E_data)"]
+        R2["📄 Zero .bss in SRAM\n(_S_bss → _E_bss)"]
+        R3["📞 Call main()"]
+        R1 --> R2 --> R3
+    end
+
+    D --> RESET
+
+    R3 --> E
+
+    subgraph MAIN["🚀 main()"]
+        M1["🔧 Enable GPIOA clock\n(RCC_APB2ENR |= 1 << 2)"]
+        M2["🔧 Configure PA13 as push-pull output\n(GPIOA_CHR)"]
+        M3["🔁 Infinite loop: toggle PA13 with delay"]
+        M1 --> M2 --> M3
+    end
+
+    E --> MAIN
+
+    style A fill:#dc2626,stroke:#ef4444,color:#fff
+    style B fill:#1e40af,stroke:#3b82f6,color:#fff
+    style C fill:#1e40af,stroke:#3b82f6,color:#fff
+    style RESET fill:#065f46,stroke:#10b981,color:#fff
+    style MAIN fill:#92400e,stroke:#f59e0b,color:#fff
 ```
 
