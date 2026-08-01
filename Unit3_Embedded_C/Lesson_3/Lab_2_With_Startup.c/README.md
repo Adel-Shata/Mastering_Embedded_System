@@ -8,7 +8,18 @@ The firmware blinks the onboard LED (PA13) using direct register manipulation, p
 
 ## 🎥 Demo
 
-▶ **Watch the demonstration on YouTube:** [https://youtu.be/CR9gibXqalM](https://youtu.be/CR9gibXqalM)
+<p align="center">
+  <a href="https://youtu.be/CR9gibXqalM">
+    <img
+        src="https://img.youtube.com/vi/CR9gibXqalM/maxresdefault.jpg"
+        alt="Project Demo"
+        width="900">
+  </a>
+</p>
+
+<p align="center">
+<b>▶ Click the image above to watch the demonstration video.</b>
+</p>
 
 ---
 
