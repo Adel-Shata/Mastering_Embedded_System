@@ -14,9 +14,9 @@
 
   ![Progress](https://img.shields.io/badge/100%25%20Completed-brightgreen)
 
-- **Unit 4: System Architecture**  
+- [**Unit 4: System Architecture**](./Unit4_System_Architect/)
 
-  ![Progress](https://img.shields.io/badge/1%25%20Completed-orange)
+  ![Progress](https://img.shields.io/badge/10%25%20Completed-orange)
 
 - **Unit 5: First Term Projects**  
 
