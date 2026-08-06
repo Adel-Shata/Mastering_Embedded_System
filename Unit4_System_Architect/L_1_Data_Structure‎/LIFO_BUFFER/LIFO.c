@@ -84,6 +84,21 @@ BUF_Status_t LIFO_Pop(LIFO_BUF_t *urBuffer, Element_DataType *popedItem){
 	return returnFlag;
 }
 
+// Clearing all of the elements within the buffer
+BUF_Status_t LIFO_Clear(LIFO_BUF_t *urBuffer){
+	BUF_Status_t returnFlag = succeeded;
+
+	if(NULL == urBuffer)
+		returnFlag = failed;
+	else if(empty == Storage_Status((LIFO_BUF_t *)urBuffer))
+		returnFlag = empty;
+	else{
+		urBuffer->top = urBuffer->base;
+		urBuffer->count  = 0;
+	}
+	return returnFlag;
+}
+
 // Displays all of the buffer's elements
 void LIFO_Display(LIFO_BUF_t *urBuffer){
 	int counter = 0;

@@ -46,6 +46,9 @@ BUF_Status_t LIFO_Push(LIFO_BUF_t *urBuffer, Element_DataType urItem);
 // Pops an element from your buffer
 BUF_Status_t LIFO_Pop(LIFO_BUF_t *urBuffer, Element_DataType *popedItem);
 
+// Clearing all of the elements within the buffer
+BUF_Status_t LIFO_Clear(LIFO_BUF_t *urBuffer);
+
 // Displays all of the buffer's elements
 void LIFO_Display(LIFO_BUF_t *urBuffer);
 

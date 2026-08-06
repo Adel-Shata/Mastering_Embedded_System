@@ -29,8 +29,10 @@ int main(void) {
     }
     do{
         print("=====================\n"
-        	  "1. Display the buffer\n2. Push new element\n"
+        	  "1. Display the buffer\n"
+        	  "2. Push new element\n"
         	  "3. Pop and display an element\n"
+        	  "4. Clear all the buffer\n"
         	  "Any_other_number. exit\n"
         	  "=====================\n"
         	  "Please enter your choice: ")
@@ -73,11 +75,24 @@ int main(void) {
     			else{
     				print("The element equal %d has been popped properly\n", urNewElement)
     			}
+    			break;
+    		//case 4: clearing all of the elements within the buffer
+    		case 4 :
+    			returnFlag = LIFO_Clear(&myBuffer);
+    			if(failed == returnFlag){
+    				print("You have entered nonexistent or invalid arguments\n")
+    			}
+       			else if(empty == returnFlag){
+        			print("No thing to clear\n")
+        		}
+    			else{
+    				print("All of the elements have beed cleared properly\n")
+    			}
     		default :
     			/*It will exit the loop*/
     			break;
     	}
-    }while(!(choice < 1 || choice > 3));
+    }while(!(choice < 1 || choice > 4));
 
 	return EXIT_SUCCESS;
 }
