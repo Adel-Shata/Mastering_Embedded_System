@@ -15,11 +15,7 @@
  */
 #define Element_DataType unsigned int
 
-/*
- * Chose whether you need your buffer circular or linear
- */
 
-//#define linear //← this valid for the linked list and the FIFO approaches only
 
 
 #endif /* BUF_CONFIG_H_ */

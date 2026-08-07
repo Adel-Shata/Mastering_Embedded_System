@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : LIFO.c
+ Name        : main.c
  Author      : Adel Shata
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style

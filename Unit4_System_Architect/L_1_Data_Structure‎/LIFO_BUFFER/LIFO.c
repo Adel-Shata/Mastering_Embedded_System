@@ -12,7 +12,7 @@
 
 // Tells the status of the buffer's storage
 BUF_Status_t static Storage_Status(LIFO_BUF_t *urBuffer){
-	BUF_Status_t returnFlag = neither_full_nor_enmpty;
+	BUF_Status_t returnFlag = neither_full_nor_empty;
 
 	//Checking the status
 	if(0 == urBuffer->count)
@@ -88,8 +88,11 @@ BUF_Status_t LIFO_Pop(LIFO_BUF_t *urBuffer, Element_DataType *popedItem){
 BUF_Status_t LIFO_Clear(LIFO_BUF_t *urBuffer){
 	BUF_Status_t returnFlag = succeeded;
 
+	// Checking if the passed buffer is existed.
 	if(NULL == urBuffer)
 		returnFlag = failed;
+
+	// Checking if the passed buffer is not empty, so we can clear the buffer properly.
 	else if(empty == Storage_Status((LIFO_BUF_t *)urBuffer))
 		returnFlag = empty;
 	else{
@@ -107,6 +110,8 @@ void LIFO_Display(LIFO_BUF_t *urBuffer){
 	if(NULL == urBuffer){
 		print("***************\nYou have entered nonexistent argument\n***************\n")
 	}
+
+	// Checking if the passed buffer is not empty, so we can display the buffer properly.
 	else if(empty == Storage_Status((LIFO_BUF_t *)urBuffer)){
 		print("***************\nThe buffer is empty\n***************\n");
 	}

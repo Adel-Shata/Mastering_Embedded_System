@@ -24,7 +24,7 @@ typedef enum {
 	failed,
 	empty,
 	full,
-	neither_full_nor_enmpty
+	neither_full_nor_empty
 }BUF_Status_t;
 
 /*
