@@ -56,7 +56,10 @@ BUF_Status_t LIFO_Push(LIFO_BUF_t *urBuffer, Element_DataType urItem){
 		returnFlag = full;
 
 	else{
-		*(urBuffer->top)++ = urItem;
+		if(empty == Storage_Status((LIFO_BUF_t *)urBuffer))
+			*(urBuffer->top) = urItem;
+		else
+			*++(urBuffer->top) = urItem;
 		(urBuffer->count)++;
 	}
 	return returnFlag;
