@@ -38,6 +38,6 @@ The system consists of:
 
 The corresponding C implementation is available in:
 
-`Code_Implementation/`
+[Code_Implementation/](./Code_Implementation/)
 
 ![Code Implementation](Code_Implementation.png)
