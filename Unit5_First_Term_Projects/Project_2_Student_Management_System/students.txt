@@ -1,0 +1,24 @@
+1001 Adel Shata 4 1 6 10 13
+1002 Ahmed Ali 2.50 2 7 11 15
+1003 Mohamed Hassan 4.00 3 8 12 16
+1004 Omar Salah 1.75 4 9 14
+1005 Youssef Ahmed 3.20 5 6 7
+1006 Mahmoud Samir 2.90 1 2 3 4 5
+1007 Mostafa Khaled 3.60 10 11 12 13 14 15 16
+1008 Karim Tarek 0.00 1
+1009 Amr Nabil 4.00 16
+1010 Hassan Ibrahim 3.00 2 4 6
+
+1002 Duplicate Roll 3.00 1 2
+
+1011 Invalid Course 3.50 1 99 5
+
+1012 Duplicate Course 3.50 1 1 2
+
+1013 TooMany Courses 3.00 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 1 2
+
+1014 No Courses 3.25
+
+1015 High GPA 5.50 1 2
+
+1016 Negative GPA -1.00 3 4

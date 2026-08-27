@@ -1,0 +1,37 @@
+---------- Add Student Manually ----------
+----------
+Add student details
+----------
+Enter the roll number: 
+2001
+Enter the first name of the student: 
+John
+Enter the last name of the student: 
+Doe
+Enter student's GPA: 
+3.5
+1: MATH1
+2: MATH2
+3: MATH3
+4: MATH4
+5: MATH5
+6: OPRERATING_SYSTEMS
+7: CONTROL1
+8: CONTROL2
+9: CONTROL3
+10: ELECTRONICS1
+11: ELECTRONICS2
+12: CIRCUIT1
+13: CIRCUIT2
+14: CIRCUIT3
+15: DEUTSCH
+16: ENGLISH
+Enter course's ID: 1
+The course with ID= 1 has been added properly
+Enter Y if you want to add another course, and other char if no: 
+n
+Student has been added properly.
+Registered student = 17
+Remaining places   = 33
+
+Press Enter to continue...

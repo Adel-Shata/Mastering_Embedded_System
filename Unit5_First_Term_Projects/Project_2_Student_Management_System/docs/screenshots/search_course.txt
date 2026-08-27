@@ -1,0 +1,96 @@
+---------- Find Students By Course ----------
+1: MATH1
+2: MATH2
+3: MATH3
+4: MATH4
+5: MATH5
+6: OPRERATING_SYSTEMS
+7: CONTROL1
+8: CONTROL2
+9: CONTROL3
+10: ELECTRONICS1
+11: ELECTRONICS2
+12: CIRCUIT1
+13: CIRCUIT2
+14: CIRCUIT3
+15: DEUTSCH
+16: ENGLISH
+Enter the course ID need1
+ed to find the students registered in: 
+[Course Info]
+Course Name: MATH1
+1st Student:
+Student Roll     : 1001
+Student first Name: Adel
+student Last Name: Shata
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 6	→OPERATING SYSTEMS
+3. →ID: 10	→ELECTRONICS1
+4. →ID: 13	→CIRCUIT2
+2st Student:
+Student Roll     : 1006
+Student first Name: Mahmoud
+student Last Name: Samir
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 2	→MATH2
+3. →ID: 3	→MATH3
+4. →ID: 4	→MATH4
+5. →ID: 5	→MATH5
+3st Student:
+Student Roll     : 1008
+Student first Name: Karim
+student Last Name: Tarek
+[Registered Courses]
+1. →ID: 1	→MATH1
+4st Student:
+Student Roll     : 1011
+Student first Name: Invalid
+student Last Name: Course
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 5	→MATH5
+5st Student:
+Student Roll     : 1012
+Student first Name: Duplicate
+student Last Name: Course
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 2	→MATH2
+6st Student:
+Student Roll     : 1013
+Student first Name: TooMany
+student Last Name: Courses
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 2	→MATH2
+3. →ID: 3	→MATH3
+4. →ID: 4	→MATH4
+5. →ID: 5	→MATH5
+6. →ID: 6	→OPERATING SYSTEMS
+7. →ID: 7	→CONTROL1
+8. →ID: 8	→CONTROL2
+9. →ID: 9	→CONTROL3
+10. →ID: 10	→ELECTRONICS1
+7st Student:
+Student Roll     : 1014
+Student first Name: No
+student Last Name: Courses
+[Registered Courses]
+1. →ID: 1	→MATH1
+8st Student:
+Student Roll     : 1015
+Student first Name: High
+student Last Name: GPA
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 2	→MATH2
+9st Student:
+Student Roll     : 2001
+Student first Name: John
+student Last Name: Doe
+[Registered Courses]
+1. →ID: 1	→MATH1
+
+Press Enter to continue...

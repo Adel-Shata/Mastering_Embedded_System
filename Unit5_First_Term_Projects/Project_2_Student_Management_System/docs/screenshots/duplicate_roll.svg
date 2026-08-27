@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="547" height="1066" style="background:#1e1e1e;">
+  <style>
+    .term { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', 'Monospace'; font-size: 13px; fill: #d4d4d4; white-space: pre; }
+    .prompt { fill: #00ff00; }
+    .header { fill: #569cd6; }
+    .error { fill: #f44747; }
+    .success { fill: #4ec9b0; }
+  </style>
+  <rect width="100%" height="100%" fill="#1e1e1e"/>
+  <text x="20" y="33" class="term">---------- Add Student Manually ----------</text>
+  <text x="20" y="51" class="term">----------</text>
+  <text x="20" y="69" class="term">Add student details</text>
+  <text x="20" y="87" class="term">----------</text>
+  <text x="20" y="105" class="term prompt">Enter the roll number: </text>
+  <text x="20" y="123" class="term">2002</text>
+  <text x="20" y="141" class="term prompt">Enter the first name of the student: </text>
+  <text x="20" y="159" class="term">Test</text>
+  <text x="20" y="177" class="term prompt">Enter the last name of the student: </text>
+  <text x="20" y="195" class="term">User</text>
+  <text x="20" y="213" class="term prompt">Enter student's GPA: </text>
+  <text x="20" y="231" class="term">5.0</text>
+  <text x="20" y="249" class="term error">Invalid GPA, Please insert it from 0 → 4</text>
+  <text x="20" y="267" class="term prompt">Enter student's GPA: </text>
+  <text x="20" y="285" class="term">3.0</text>
+  <text x="20" y="303" class="term">1: MATH1</text>
+  <text x="20" y="321" class="term">2: MATH2</text>
+  <text x="20" y="339" class="term">3: MATH3</text>
+  <text x="20" y="357" class="term">4: MATH4</text>
+  <text x="20" y="375" class="term">5: MATH5</text>
+  <text x="20" y="393" class="term">6: OPRERATING_SYSTEMS</text>
+  <text x="20" y="411" class="term">7: CONTROL1</text>
+  <text x="20" y="429" class="term">8: CONTROL2</text>
+  <text x="20" y="447" class="term">9: CONTROL3</text>
+  <text x="20" y="465" class="term">10: ELECTRONICS1</text>
+  <text x="20" y="483" class="term">11: ELECTRONICS2</text>
+  <text x="20" y="501" class="term">12: CIRCUIT1</text>
+  <text x="20" y="519" class="term">13: CIRCUIT2</text>
+  <text x="20" y="537" class="term">14: CIRCUIT3</text>
+  <text x="20" y="555" class="term">15: DEUTSCH</text>
+  <text x="20" y="573" class="term">16: ENGLISH</text>
+  <text x="20" y="591" class="term prompt">Enter course's ID: 1</text>
+  <text x="20" y="609" class="term success">The course with ID= 1 has been added properly</text>
+  <text x="20" y="627" class="term prompt">Enter Y if you want to add another course, and other char if no: </text>
+  <text x="20" y="645" class="term">n</text>
+  <text x="20" y="663" class="term success">Student has been added properly.</text>
+  <text x="20" y="681" class="term">Registered student = 17</text>
+  <text x="20" y="699" class="term">Remaining places   = 33</text>
+  <text x="20" y="717" class="term"></text>
+  <text x="20" y="735" class="term">Press Enter to continue...</text>
+  <text x="20" y="753" class="term"></text>
+  <text x="20" y="771" class="term header">========================================</text>
+  <text x="20" y="789" class="term header">        STUDENT DATA BASE SYSTEM</text>
+  <text x="20" y="807" class="term header">========================================</text>
+  <text x="20" y="825" class="term">1. Add student manually</text>
+  <text x="20" y="843" class="term">2. Add students from file</text>
+  <text x="20" y="861" class="term">3. Find number of students</text>
+  <text x="20" y="879" class="term">4. Find student by roll number</text>
+  <text x="20" y="897" class="term">5. Find student by first name</text>
+  <text x="20" y="915" class="term">6. Find students by course</text>
+  <text x="20" y="933" class="term">7. Delete student</text>
+  <text x="20" y="951" class="term">8. Update student</text>
+  <text x="20" y="969" class="term">9. Exit</text>
+  <text x="20" y="987" class="term header">========================================</text>
+  <text x="20" y="1005" class="term prompt">Enter your choice: 9</text>
+  <text x="20" y="1023" class="term"></text>
+  <text x="20" y="1041" class="term">Exiting the program...</text>
+</svg>

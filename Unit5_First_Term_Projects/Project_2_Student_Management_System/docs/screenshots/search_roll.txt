@@ -1,0 +1,14 @@
+---------- Find Student By Roll ----------
+Enter the roll number: 
+1001
+[Student Infos]
+Student Roll     : 1001
+Student first Name: Adel
+student Last Name: Shata
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 6	→OPERATING SYSTEMS
+3. →ID: 10	→ELECTRONICS1
+4. →ID: 13	→CIRCUIT2
+
+Press Enter to continue...

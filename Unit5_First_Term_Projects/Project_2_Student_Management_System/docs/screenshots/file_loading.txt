@@ -1,0 +1,57 @@
+---------- Add Students From File ----------
+Student with roll: 1001 has been added successfully
+Student with roll: 1002 has been added successfully
+Student with roll: 1003 has been added successfully
+Student with roll: 1004 has been added successfully
+Student with roll: 1005 has been added successfully
+Student with roll: 1006 has been added successfully
+Student with roll: 1007 has been added successfully
+Student with roll: 1008 has been added successfully
+Student with roll: 1009 has been added successfully
+Student with roll: 1010 has been added successfully
+We can not add the written student in the file with roll = 1002
+because the written roll is registered before with another student
+The course in the file with id = 99 for the student with roll: 1011
+is invalid or already registered before
+Student with roll: 1011 has been added successfully
+The course in the file with id = 1 for the student with roll: 1012
+is invalid or already registered before
+Student with roll: 1012 has been added successfully
+You have reached maximum course number can be registered to the student with roll: 1013
+Student with roll: 1013 has been added successfully
+There are no courses in the file for the student with roll: 1014
+It must be at least one course assigned to the student
+so you have to enter it manually
+1: MATH1
+2: MATH2
+3: MATH3
+4: MATH4
+5: MATH5
+6: OPRERATING_SYSTEMS
+7: CONTROL1
+8: CONTROL2
+9: CONTROL3
+10: ELECTRONICS1
+11: ELECTRONICS2
+12: CIRCUIT1
+13: CIRCUIT2
+14: CIRCUIT3
+15: DEUTSCH
+16: ENGLISH
+Enter course's ID: 1
+The course with ID= 1 has been added properly
+Enter Y if you want to add another course, and other char if no: 
+n
+Student with roll: 1014 has been added successfully
+Invalid GPA
+Please insert student's GPA manually: 3.5
+Student with roll: 1015 has been added successfully
+Invalid GPA
+Please insert student's GPA manually: 3.0
+Student with roll: 1016 has been added successfully
+
+Students from file have been processed.
+Registered student = 16
+Remaining places   = 34
+
+Press Enter to continue...

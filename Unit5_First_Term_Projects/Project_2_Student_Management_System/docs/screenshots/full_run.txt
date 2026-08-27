@@ -1,0 +1,450 @@
+
+========================================
+        STUDENT DATA BASE SYSTEM
+========================================
+1. Add student manually
+2. Add students from file
+3. Find number of students
+4. Find student by roll number
+5. Find student by first name
+6. Find students by course
+7. Delete student
+8. Update student
+9. Exit
+========================================
+Enter your choice: 2
+
+---------- Add Students From File ----------
+Student with roll: 1001 has been added successfully
+Student with roll: 1002 has been added successfully
+Student with roll: 1003 has been added successfully
+Student with roll: 1004 has been added successfully
+Student with roll: 1005 has been added successfully
+Student with roll: 1006 has been added successfully
+Student with roll: 1007 has been added successfully
+Student with roll: 1008 has been added successfully
+Student with roll: 1009 has been added successfully
+Student with roll: 1010 has been added successfully
+We can not add the written student in the file with roll = 1002
+because the written roll is registered before with another student
+The course in the file with id = 99 for the student with roll: 1011
+is invalid or already registered before
+Student with roll: 1011 has been added successfully
+The course in the file with id = 1 for the student with roll: 1012
+is invalid or already registered before
+Student with roll: 1012 has been added successfully
+You have reached maximum course number can be registered to the student with roll: 1013
+Student with roll: 1013 has been added successfully
+There are no courses in the file for the student with roll: 1014
+It must be at least one course assigned to the student
+so you have to enter it manually
+1: MATH1
+2: MATH2
+3: MATH3
+4: MATH4
+5: MATH5
+6: OPRERATING_SYSTEMS
+7: CONTROL1
+8: CONTROL2
+9: CONTROL3
+10: ELECTRONICS1
+11: ELECTRONICS2
+12: CIRCUIT1
+13: CIRCUIT2
+14: CIRCUIT3
+15: DEUTSCH
+16: ENGLISH
+Enter course's ID: 1
+The course with ID= 1 has been added properly
+Enter Y if you want to add another course, and other char if no: 
+n
+Student with roll: 1014 has been added successfully
+Invalid GPA
+Please insert student's GPA manually: 3.5
+Student with roll: 1015 has been added successfully
+Invalid GPA
+Please insert student's GPA manually: 3.0
+Student with roll: 1016 has been added successfully
+
+Students from file have been processed.
+Registered student = 16
+Remaining places   = 34
+
+Press Enter to continue...
+========================================
+        STUDENT DATA BASE SYSTEM
+========================================
+1. Add
+ student manually
+2. Add students from file
+3. Find number of students
+4. Find student by roll number
+5. Find student by first name
+6. Find students by course
+7. Delete student
+8. Update student
+9. Exit
+========================================
+Enter your choice: 1
+
+---------- Add Student Manually ----------
+----------
+Add student details
+----------
+Enter the roll number: 
+2001
+Enter the first name of the student: 
+John
+Enter the last name of the student: 
+Doe
+Enter student's GPA: 
+3.5
+1: MATH1
+2: MATH2
+3: MATH3
+4: MATH4
+5: MATH5
+6: OPRERATING_SYSTEMS
+7: CONTROL1
+8: CONTROL2
+9: CONTROL3
+10: ELECTRONICS1
+11: ELECTRONICS2
+12: CIRCUIT1
+13: CIRCUIT2
+14: CIRCUIT3
+15: DEUTSCH
+16: ENGLISH
+Enter course's ID: 1
+The course with ID= 1 has been added properly
+Enter Y if you want to add another course, and other char if no: 
+n
+Student has been added properly.
+Registered student = 17
+Remaining places   = 33
+
+Press Enter to continue...
+
+========================================
+        STUDENT DATA BASE SYSTEM
+========================================
+1. Add student manually
+2. Add students from file
+3. Find number of students
+4. Find student by roll number
+5. Find student by first name
+6. Find students by course
+7. Delete student
+8. Update student
+9. Exit
+========================================
+Enter your choice: 4
+
+---------- Find Student By Roll ----------
+Enter the roll number: 
+1001
+[Student Infos]
+Student Roll     : 1001
+Student first Name: Adel
+student Last Name: Shata
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 6	→OPERATING SYSTEMS
+3. →ID: 10	→ELECTRONICS1
+4. →ID: 13	→CIRCUIT2
+
+Press Enter to continue...
+
+========================================
+        STUDENT DATA BASE SYSTEM
+========================================
+1. Add student manually
+2. Add students from file
+3. Find number of students
+4. Find student by roll number
+5. Find student by first name
+6. Find students by course
+7. Delete student
+8. Update student
+9. Exit
+========================================
+Enter your choice: 5
+
+---------- Find Student By First Name ----------
+Enter student's Name: 
+Adel
+[Students Infos]
+1st Student:
+Student Roll     : 1001
+Student first Name: Adel
+student Last Name: Shata
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 6	→OPERATING SYSTEMS
+3. →ID: 10	→ELECTRONICS1
+4. →ID: 13	→CIRCUIT2
+
+Press Enter to cont
+inue...
+========================================
+        STUDENT DATA BASE SYSTEM
+========================================
+1. Add student manually
+2. Add students from file
+3. Find number of students
+4. Find student by roll number
+5. Find student by first name
+6. Find students by course
+7. Delete student
+8. Update student
+9. Exit
+========================================
+Enter your choice: 6
+
+---------- Find Students By Course ----------
+1: MATH1
+2: MATH2
+3: MATH3
+4: MATH4
+5: MATH5
+6: OPRERATING_SYSTEMS
+7: CONTROL1
+8: CONTROL2
+9: CONTROL3
+10: ELECTRONICS1
+11: ELECTRONICS2
+12: CIRCUIT1
+13: CIRCUIT2
+14: CIRCUIT3
+15: DEUTSCH
+16: ENGLISH
+Enter the course ID need1
+ed to find the students registered in: 
+[Course Info]
+Course Name: MATH1
+1st Student:
+Student Roll     : 1001
+Student first Name: Adel
+student Last Name: Shata
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 6	→OPERATING SYSTEMS
+3. →ID: 10	→ELECTRONICS1
+4. →ID: 13	→CIRCUIT2
+2st Student:
+Student Roll     : 1006
+Student first Name: Mahmoud
+student Last Name: Samir
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 2	→MATH2
+3. →ID: 3	→MATH3
+4. →ID: 4	→MATH4
+5. →ID: 5	→MATH5
+3st Student:
+Student Roll     : 1008
+Student first Name: Karim
+student Last Name: Tarek
+[Registered Courses]
+1. →ID: 1	→MATH1
+4st Student:
+Student Roll     : 1011
+Student first Name: Invalid
+student Last Name: Course
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 5	→MATH5
+5st Student:
+Student Roll     : 1012
+Student first Name: Duplicate
+student Last Name: Course
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 2	→MATH2
+6st Student:
+Student Roll     : 1013
+Student first Name: TooMany
+student Last Name: Courses
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 2	→MATH2
+3. →ID: 3	→MATH3
+4. →ID: 4	→MATH4
+5. →ID: 5	→MATH5
+6. →ID: 6	→OPERATING SYSTEMS
+7. →ID: 7	→CONTROL1
+8. →ID: 8	→CONTROL2
+9. →ID: 9	→CONTROL3
+10. →ID: 10	→ELECTRONICS1
+7st Student:
+Student Roll     : 1014
+Student first Name: No
+student Last Name: Courses
+[Registered Courses]
+1. →ID: 1	→MATH1
+8st Student:
+Student Roll     : 1015
+Student first Name: High
+student Last Name: GPA
+[Registered Courses]
+1. →ID: 1	→MATH1
+2. →ID: 2	→MATH2
+9st Student:
+Student Roll     : 2001
+Student first Name: John
+student Last Name: Doe
+[Registered Courses]
+1. →ID: 1	→MATH1
+
+Press Enter to continue...
+
+========================================
+        STUDENT DATA BASE SYSTEM
+========================================
+1. Add student manually
+2. Add students from file
+3. Find number of students
+4. Find student by roll number
+5. Find student by first name
+6. Find students by course
+7. Delete student
+8. Update student
+9. Exit
+========================================
+Enter your choice: 8
+
+---------- Update Student ----------
+Enter student' roll number, to be updated: 
+1001
+Please enter your choice:-
+1. Update student's roll
+2. Update student's first name
+3. Update student's last name
+4. Update student's GPA
+5. Update student's courses
+Enter your choice: 
+2
+Enter the new first name
+AdelUpdated
+Enter Y if you want to perform another update, and other char if no: 
+n
+
+Press Enter to continue...
+
+========================================
+        STUDENT DATA BASE SYSTEM
+========================================
+1. Add student manually
+2. Add students from file
+3. Find number of students
+4. Find student by roll number
+5. Find student by first name
+6. Find students by course
+7. Delete student
+8. Update student
+9. Exit
+========================================
+Enter your choice: 7
+
+---------- Delete Student ----------
+Enter roll number for student to be deleted: 
+1001
+Student has been deleted properly.
+Registered student = 16
+Remaining places   = 34
+
+Press Enter to continue...
+
+========================================
+        STUDENT DATA BASE SYSTEM
+========================================
+1. Add student manually
+2. Add students from file
+3. Find number of students
+4. Find student by roll number
+5. Find student by first name
+6. Find students by course
+7. Delete student
+8. Update student
+9. Exit
+========================================
+Enter your choice: 3
+
+---------- Students Number ----------
+Registered student = 16
+Remaining places   = 34
+
+Press Enter to continue...
+
+========================================
+        STUDENT DATA BASE SYSTEM
+========================================
+1. Add student manually
+2. Add students from file
+3. Find number of students
+4. Find student by roll number
+5. Find student by first name
+6. Find students by course
+7. Delete student
+8. Update student
+9. Exit
+========================================
+Enter your choice: 1
+
+---------- Add Student Manually ----------
+----------
+Add student details
+----------
+Enter the roll number: 
+2002
+Enter the first name of the student: 
+Test
+Enter the last name of the student: 
+User
+Enter student's GPA: 
+5.0
+Invalid GPA, Please insert it from 0 → 4
+Enter student's GPA: 
+3.0
+1: MATH1
+2: MATH2
+3: MATH3
+4: MATH4
+5: MATH5
+6: OPRERATING_SYSTEMS
+7: CONTROL1
+8: CONTROL2
+9: CONTROL3
+10: ELECTRONICS1
+11: ELECTRONICS2
+12: CIRCUIT1
+13: CIRCUIT2
+14: CIRCUIT3
+15: DEUTSCH
+16: ENGLISH
+Enter course's ID: 1
+The course with ID= 1 has been added properly
+Enter Y if you want to add another course, and other char if no: 
+n
+Student has been added properly.
+Registered student = 17
+Remaining places   = 33
+
+Press Enter to continue...
+
+========================================
+        STUDENT DATA BASE SYSTEM
+========================================
+1. Add student manually
+2. Add students from file
+3. Find number of students
+4. Find student by roll number
+5. Find student by first name
+6. Find students by course
+7. Delete student
+8. Update student
+9. Exit
+========================================
+Enter your choice: 9
+
+Exiting the program...

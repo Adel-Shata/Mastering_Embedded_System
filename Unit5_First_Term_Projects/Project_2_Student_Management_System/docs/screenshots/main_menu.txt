@@ -1,0 +1,16 @@
+
+========================================
+        STUDENT DATA BASE SYSTEM
+========================================
+1. Add student manually
+2. Add students from file
+3. Find number of students
+4. Find student by roll number
+5. Find student by first name
+6. Find students by course
+7. Delete student
+8. Update student
+9. Exit
+========================================
+Enter your choice: 9
+Exiting the program...

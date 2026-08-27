@@ -1,0 +1,5 @@
+---------- Students Number ----------
+Registered student = 16
+Remaining places   = 34
+
+Press Enter to continue...

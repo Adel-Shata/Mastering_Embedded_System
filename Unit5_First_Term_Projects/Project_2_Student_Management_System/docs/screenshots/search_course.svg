@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="391" height="1768" style="background:#1e1e1e;">
+  <style>
+    .term { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', 'Monospace'; font-size: 13px; fill: #d4d4d4; white-space: pre; }
+    .prompt { fill: #00ff00; }
+    .header { fill: #569cd6; }
+    .error { fill: #f44747; }
+    .success { fill: #4ec9b0; }
+  </style>
+  <rect width="100%" height="100%" fill="#1e1e1e"/>
+  <text x="20" y="33" class="term">---------- Find Students By Course ----------</text>
+  <text x="20" y="51" class="term">1: MATH1</text>
+  <text x="20" y="69" class="term">2: MATH2</text>
+  <text x="20" y="87" class="term">3: MATH3</text>
+  <text x="20" y="105" class="term">4: MATH4</text>
+  <text x="20" y="123" class="term">5: MATH5</text>
+  <text x="20" y="141" class="term">6: OPRERATING_SYSTEMS</text>
+  <text x="20" y="159" class="term">7: CONTROL1</text>
+  <text x="20" y="177" class="term">8: CONTROL2</text>
+  <text x="20" y="195" class="term">9: CONTROL3</text>
+  <text x="20" y="213" class="term">10: ELECTRONICS1</text>
+  <text x="20" y="231" class="term">11: ELECTRONICS2</text>
+  <text x="20" y="249" class="term">12: CIRCUIT1</text>
+  <text x="20" y="267" class="term">13: CIRCUIT2</text>
+  <text x="20" y="285" class="term">14: CIRCUIT3</text>
+  <text x="20" y="303" class="term">15: DEUTSCH</text>
+  <text x="20" y="321" class="term">16: ENGLISH</text>
+  <text x="20" y="339" class="term">Enter the course ID need1</text>
+  <text x="20" y="357" class="term">ed to find the students registered in: </text>
+  <text x="20" y="375" class="term">[Course Info]</text>
+  <text x="20" y="393" class="term">Course Name: MATH1</text>
+  <text x="20" y="411" class="term">1st Student:</text>
+  <text x="20" y="429" class="term">Student Roll     : 1001</text>
+  <text x="20" y="447" class="term">Student first Name: Adel</text>
+  <text x="20" y="465" class="term">student Last Name: Shata</text>
+  <text x="20" y="483" class="term">[Registered Courses]</text>
+  <text x="20" y="501" class="term">1. →ID: 1   →MATH1</text>
+  <text x="20" y="519" class="term">2. →ID: 6   →OPERATING SYSTEMS</text>
+  <text x="20" y="537" class="term">3. →ID: 10  →ELECTRONICS1</text>
+  <text x="20" y="555" class="term">4. →ID: 13  →CIRCUIT2</text>
+  <text x="20" y="573" class="term">2st Student:</text>
+  <text x="20" y="591" class="term">Student Roll     : 1006</text>
+  <text x="20" y="609" class="term">Student first Name: Mahmoud</text>
+  <text x="20" y="627" class="term">student Last Name: Samir</text>
+  <text x="20" y="645" class="term">[Registered Courses]</text>
+  <text x="20" y="663" class="term">1. →ID: 1   →MATH1</text>
+  <text x="20" y="681" class="term">2. →ID: 2   →MATH2</text>
+  <text x="20" y="699" class="term">3. →ID: 3   →MATH3</text>
+  <text x="20" y="717" class="term">4. →ID: 4   →MATH4</text>
+  <text x="20" y="735" class="term">5. →ID: 5   →MATH5</text>
+  <text x="20" y="753" class="term">3st Student:</text>
+  <text x="20" y="771" class="term">Student Roll     : 1008</text>
+  <text x="20" y="789" class="term">Student first Name: Karim</text>
+  <text x="20" y="807" class="term">student Last Name: Tarek</text>
+  <text x="20" y="825" class="term">[Registered Courses]</text>
+  <text x="20" y="843" class="term">1. →ID: 1   →MATH1</text>
+  <text x="20" y="861" class="term">4st Student:</text>
+  <text x="20" y="879" class="term">Student Roll     : 1011</text>
+  <text x="20" y="897" class="term error">Student first Name: Invalid</text>
+  <text x="20" y="915" class="term">student Last Name: Course</text>
+  <text x="20" y="933" class="term">[Registered Courses]</text>
+  <text x="20" y="951" class="term">1. →ID: 1   →MATH1</text>
+  <text x="20" y="969" class="term">2. →ID: 5   →MATH5</text>
+  <text x="20" y="987" class="term">5st Student:</text>
+  <text x="20" y="1005" class="term">Student Roll     : 1012</text>
+  <text x="20" y="1023" class="term">Student first Name: Duplicate</text>
+  <text x="20" y="1041" class="term">student Last Name: Course</text>
+  <text x="20" y="1059" class="term">[Registered Courses]</text>
+  <text x="20" y="1077" class="term">1. →ID: 1   →MATH1</text>
+  <text x="20" y="1095" class="term">2. →ID: 2   →MATH2</text>
+  <text x="20" y="1113" class="term">6st Student:</text>
+  <text x="20" y="1131" class="term">Student Roll     : 1013</text>
+  <text x="20" y="1149" class="term">Student first Name: TooMany</text>
+  <text x="20" y="1167" class="term">student Last Name: Courses</text>
+  <text x="20" y="1185" class="term">[Registered Courses]</text>
+  <text x="20" y="1203" class="term">1. →ID: 1   →MATH1</text>
+  <text x="20" y="1221" class="term">2. →ID: 2   →MATH2</text>
+  <text x="20" y="1239" class="term">3. →ID: 3   →MATH3</text>
+  <text x="20" y="1257" class="term">4. →ID: 4   →MATH4</text>
+  <text x="20" y="1275" class="term">5. →ID: 5   →MATH5</text>
+  <text x="20" y="1293" class="term">6. →ID: 6   →OPERATING SYSTEMS</text>
+  <text x="20" y="1311" class="term">7. →ID: 7   →CONTROL1</text>
+  <text x="20" y="1329" class="term">8. →ID: 8   →CONTROL2</text>
+  <text x="20" y="1347" class="term">9. →ID: 9   →CONTROL3</text>
+  <text x="20" y="1365" class="term">10. →ID: 10 →ELECTRONICS1</text>
+  <text x="20" y="1383" class="term">7st Student:</text>
+  <text x="20" y="1401" class="term">Student Roll     : 1014</text>
+  <text x="20" y="1419" class="term">Student first Name: No</text>
+  <text x="20" y="1437" class="term">student Last Name: Courses</text>
+  <text x="20" y="1455" class="term">[Registered Courses]</text>
+  <text x="20" y="1473" class="term">1. →ID: 1   →MATH1</text>
+  <text x="20" y="1491" class="term">8st Student:</text>
+  <text x="20" y="1509" class="term">Student Roll     : 1015</text>
+  <text x="20" y="1527" class="term">Student first Name: High</text>
+  <text x="20" y="1545" class="term">student Last Name: GPA</text>
+  <text x="20" y="1563" class="term">[Registered Courses]</text>
+  <text x="20" y="1581" class="term">1. →ID: 1   →MATH1</text>
+  <text x="20" y="1599" class="term">2. →ID: 2   →MATH2</text>
+  <text x="20" y="1617" class="term">9st Student:</text>
+  <text x="20" y="1635" class="term">Student Roll     : 2001</text>
+  <text x="20" y="1653" class="term">Student first Name: John</text>
+  <text x="20" y="1671" class="term">student Last Name: Doe</text>
+  <text x="20" y="1689" class="term">[Registered Courses]</text>
+  <text x="20" y="1707" class="term">1. →ID: 1   →MATH1</text>
+  <text x="20" y="1725" class="term"></text>
+  <text x="20" y="1743" class="term">Press Enter to continue...</text>
+</svg>

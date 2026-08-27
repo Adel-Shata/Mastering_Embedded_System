@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="578" height="346" style="background:#1e1e1e;">
+  <style>
+    .term { font-family: 'Cascadia Code', 'Fira Code', 'Consolas', 'Monospace'; font-size: 13px; fill: #d4d4d4; white-space: pre; }
+    .prompt { fill: #00ff00; }
+    .header { fill: #569cd6; }
+    .error { fill: #f44747; }
+    .success { fill: #4ec9b0; }
+  </style>
+  <rect width="100%" height="100%" fill="#1e1e1e"/>
+  <text x="20" y="33" class="term">---------- Update Student ----------</text>
+  <text x="20" y="51" class="term prompt">Enter student' roll number, to be updated: </text>
+  <text x="20" y="69" class="term">1001</text>
+  <text x="20" y="87" class="term">Please enter your choice:-</text>
+  <text x="20" y="105" class="term">1. Update student's roll</text>
+  <text x="20" y="123" class="term">2. Update student's first name</text>
+  <text x="20" y="141" class="term">3. Update student's last name</text>
+  <text x="20" y="159" class="term">4. Update student's GPA</text>
+  <text x="20" y="177" class="term">5. Update student's courses</text>
+  <text x="20" y="195" class="term prompt">Enter your choice: </text>
+  <text x="20" y="213" class="term">2</text>
+  <text x="20" y="231" class="term">Enter the new first name</text>
+  <text x="20" y="249" class="term">AdelUpdated</text>
+  <text x="20" y="267" class="term prompt">Enter Y if you want to perform another update, and other char if no: </text>
+  <text x="20" y="285" class="term">n</text>
+  <text x="20" y="303" class="term"></text>
+  <text x="20" y="321" class="term">Press Enter to continue...</text>
+</svg>

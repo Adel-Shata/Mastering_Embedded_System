@@ -1,0 +1,8 @@
+---------- Delete Student ----------
+Enter roll number for student to be deleted: 
+1001
+Student has been deleted properly.
+Registered student = 16
+Remaining places   = 34
+
+Press Enter to continue...

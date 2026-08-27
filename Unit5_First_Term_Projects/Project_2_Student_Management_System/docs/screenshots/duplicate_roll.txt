@@ -1,0 +1,57 @@
+---------- Add Student Manually ----------
+----------
+Add student details
+----------
+Enter the roll number: 
+2002
+Enter the first name of the student: 
+Test
+Enter the last name of the student: 
+User
+Enter student's GPA: 
+5.0
+Invalid GPA, Please insert it from 0 → 4
+Enter student's GPA: 
+3.0
+1: MATH1
+2: MATH2
+3: MATH3
+4: MATH4
+5: MATH5
+6: OPRERATING_SYSTEMS
+7: CONTROL1
+8: CONTROL2
+9: CONTROL3
+10: ELECTRONICS1
+11: ELECTRONICS2
+12: CIRCUIT1
+13: CIRCUIT2
+14: CIRCUIT3
+15: DEUTSCH
+16: ENGLISH
+Enter course's ID: 1
+The course with ID= 1 has been added properly
+Enter Y if you want to add another course, and other char if no: 
+n
+Student has been added properly.
+Registered student = 17
+Remaining places   = 33
+
+Press Enter to continue...
+
+========================================
+        STUDENT DATA BASE SYSTEM
+========================================
+1. Add student manually
+2. Add students from file
+3. Find number of students
+4. Find student by roll number
+5. Find student by first name
+6. Find students by course
+7. Delete student
+8. Update student
+9. Exit
+========================================
+Enter your choice: 9
+
+Exiting the program...
