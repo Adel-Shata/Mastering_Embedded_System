@@ -80,33 +80,66 @@ typedef enum{
 	COURSE_VALID,
 	COURSE_INVALID,
 	COURSE_REGISTERED
-}couse_status_t;
+}course_status_t;
 
 /*Section: Function Declarations*/
 
-// Find the number of students
+/**
+ * @brief 
+ * 	This function is used to find the number of students in the database.
+ * @return void
+ */
 void studentFindNum();
 
-// Adding student from a file
+
+/**
+ * @brief 
+ *  This function is used to add students from a file.
+ * 	It reads student information from a specified file and adds them to the student database.
+ * @return func_status_t 
+ */
 func_status_t studentAddFromFile();
 
-// Adding student manually
+/**
+ * @brief 
+ *  This function is used to add a student manually.
+ * @return func_status_t
+ */
 func_status_t studentAddManually();
 
-// Finding student by the given roll number
+/**
+ * @brief 
+ *  This function is used to find a student by their roll number.
+ * @return func_status_t
+ */
 func_status_t studentFindByRoll();
 
-// Finding student by the given fist name
+/**
+ * @brief 
+ *  This function is used to find a student by their first name.
+ * @return func_status_t
+ */
 func_status_t studentFindByFName();
 
-// Finding the students registered in a course
+/**
+ * @brief 
+ *  This function is used to find students registered in a specific course.
+ * @return func_status_t
+ */
 func_status_t studentFindCourses();
 
-// Deleting a student
+/**
+ * @brief 
+ *  This function is used to delete a student from the database.
+ * @return func_status_t
+ */
 func_status_t studentDelete();
 
-// Updating student infos
+/**
+ * @brief 
+ *  This function is used to update a student's information.
+ * @return func_status_t
+ */
 func_status_t studentUpdate();
-//
 
 #endif /* STUDENT_DATA_BASE_H_ */

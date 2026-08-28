@@ -16,7 +16,11 @@ int position = 0;
 
 /*helper functions ↓↓↓*/
 
-// Repositioning the pointer in the queue
+/** @brief Repositions the pointer in the queue based on the movement direction.
+ *  @param ptr Pointer to the current position in the queue.
+ *  @param moveDir Direction of movement (FORWARD or BACKWARD).
+ *  @return Pointer to the new position in the queue.
+ */
 static student_infos_t* repositionPointer(student_infos_t* ptr, int moveDir){
 	switch(moveDir){
 		case FORWARD:
@@ -41,8 +45,10 @@ static student_infos_t* repositionPointer(student_infos_t* ptr, int moveDir){
 	return ptr;
 }
 
-// check whether the list full or empty or even neither full nor empty
-storage_status_t static storageStatus(){
+/** @brief Checks whether the list full or empty or even neither full nor empty.
+ *  @return storage_status_t The status of the list (FULL, EMPTY, or NEITHER_FULL_NOR_EMPTY).
+ */
+static storage_status_t storageStatus(){
 	storage_status_t returnFlag = NEITHER_FULL_NOR_EMPTY;
 	if(Max_Student_Num == student.count){
 		returnFlag = FULL;
@@ -53,13 +59,18 @@ storage_status_t static storageStatus(){
 	return returnFlag;
 };
 
-// Checking whether the roll number of the student is valid or not
-roll_status_t static rollStatus(int roll, student_infos_t** popedStudent){
+
+/** @brief Checks the status of a student's roll number.
+ *  @param roll The roll number to check.
+ *  @param poppedStudent Pointer to the student structure if found.
+ *  @return roll_status_t The status of the roll number (VALID or REGISTERED).
+ */
+static roll_status_t rollStatus(int roll, student_infos_t** poppedStudent){
 	roll_status_t   returnFlag = ROLL_VALID;
 	student_infos_t *tempTail = student.tail;
 	for(position = 0; position < student.count; position++){
 		if(roll == tempTail->roll){
-			*popedStudent = tempTail;
+			*poppedStudent = tempTail;
 			returnFlag = ROLL_REGISTERED;
 			break;
 		}
@@ -71,9 +82,13 @@ roll_status_t static rollStatus(int roll, student_infos_t** popedStudent){
 	return returnFlag;
 }
 
-// Checking whether course id has been registered before or not
-couse_status_t static courseStatus(course_id_t courseId, student_infos_t* tempStudent){
-	couse_status_t returnFlag = COURSE_VALID;
+/** @brief Checks the status of a course ID.
+ *  @param courseId The course ID to check.
+ *  @param tempStudent Pointer to the student structure.
+ *  @return course_status_t The status of the course ID (VALID, INVALID, or REGISTERED).
+ */
+static course_status_t courseStatus(course_id_t courseId, student_infos_t* tempStudent){
+	course_status_t returnFlag = COURSE_VALID;
 	int counter;
 	if((courseId > ENGLISH) || (courseId < MATH1)){
 		returnFlag = COURSE_INVALID;
@@ -90,13 +105,19 @@ couse_status_t static courseStatus(course_id_t courseId, student_infos_t* tempSt
 	return returnFlag;
 }
 
-// Adding the first/last Names or any string
+
+/** @brief Adds the first/last Names or any string.
+ *  @param name Pointer to the name string.
+ *  @param nameLength The maximum length of the name string.
+ */
 static void studentGetString(char *name, int nameLength){
 	fgets(name, nameLength, stdin);
 	name[strcspn(name, "\n")] = '\0';
 }
 
-// Adding student's GPA
+/** @brief Adds the GPA for a student.
+ *  @param tempStudent Pointer to the student structure.
+ */
 static void studentAddGpa(student_infos_t* tempStudent){
 
 	do{
@@ -109,11 +130,14 @@ static void studentAddGpa(student_infos_t* tempStudent){
 	}while((tempStudent->gpa) > 4 || (tempStudent->gpa) < 0);
 }
 
-// Adding student's courses
+
+/** @brief Adds courses for a student.
+ *  @param tempStudent Pointer to the student structure.
+ */
 static void studentAddCourses(student_infos_t* tempStudent){
 	char choice = 'y';
 	int courseId;
-	couse_status_t courseState = COURSE_VALID;
+	course_status_t courseState = COURSE_VALID;
 	while((MAX_COURSES_PER_STUDENT > tempStudent->courseCount) && (('y' == choice) || ('Y' == choice))){
 		print("1: MATH1\n"
 				"2: MATH2\n"
@@ -156,7 +180,11 @@ static void studentAddCourses(student_infos_t* tempStudent){
 	else{/*NOTHING*/}
 }
 
-// Fill student Infos
+
+/** @brief Fills the information for a student.
+ *  @param roll The roll number of the student.
+ *  @param tempStudent Pointer to the student structure.
+ */
 static void studentFillInfos(int roll, student_infos_t* tempStudent){
 	tempStudent->roll = roll;
 	print("Enter the first name of the student: ")
@@ -170,7 +198,9 @@ static void studentFillInfos(int roll, student_infos_t* tempStudent){
 	student.count++;
 }
 
-// Displaying the course name according to its ID
+/** @brief Displays the name of a course based on its ID.
+ *  @param courseId The ID of the course to display.
+ */
 static void studentDisplayCourses(course_id_t courseId){
 	switch(courseId){
 		case MATH1:
@@ -226,7 +256,9 @@ static void studentDisplayCourses(course_id_t courseId){
 	}
 }
 
-// Displaying student Infos
+/** @brief Displays the information for a student.
+ *  @param student Pointer to the student structure.
+ */
 static void studentDisplayInfos(student_infos_t *student){
 	int counter;
 	print("Student Roll     : %i\n"
@@ -255,7 +287,7 @@ func_status_t studentAddFromFile()
 {
 	FILE *file;
 	func_status_t returnFlag = E_SUCCESS;
-	couse_status_t courseState;
+	course_status_t courseState;
 	student_infos_t *tempStudent = NULL;
 	char line[200];
 	char *token;
