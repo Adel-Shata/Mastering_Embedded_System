@@ -1,0 +1,27 @@
+#include "driver/Alarm_Actuator_Driver.h"
+
+static enum{
+    ALARM_ACTUATOR_OFF = 0,
+    ALARM_ACTUATOR_ON,
+    ALARM_ACTUATOR_WAITING
+}ALARM_ACTUATOR_STATE;
+
+void alarmActuatorInit() {
+    ALARM_ACTUATOR_STATE = ALARM_ACTUATOR_WAITING;
+}
+
+void alarmActuatorOn() {
+    if(ALARM_ACTUATOR_STATE == ALARM_ACTUATOR_WAITING) {
+        ALARM_ACTUATOR_STATE = ALARM_ACTUATOR_ON;
+        setAlarmActuator(ALARM_ACTUATOR_ON);
+        ALARM_ACTUATOR_STATE = ALARM_ACTUATOR_WAITING;
+    }
+}
+
+void alarmActuatorOff() {
+    if(ALARM_ACTUATOR_STATE == ALARM_ACTUATOR_WAITING) {
+        ALARM_ACTUATOR_STATE = ALARM_ACTUATOR_OFF;
+        setAlarmActuator(ALARM_ACTUATOR_OFF);
+        ALARM_ACTUATOR_STATE = ALARM_ACTUATOR_WAITING;
+    }
+}

@@ -1,0 +1,212 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+flash            0x08000000         0x00020000         xr
+sram             0x20000000         0x00005000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x08000000      0x348
+ *(.vectors*)
+ .vectors       0x08000000       0x44 build/objs/startup/startup.o
+                0x08000000                vectors
+ *(.text*)
+ .text          0x08000044       0x90 build/objs/startup/startup.o
+                0x08000044                ExternalInterruptsHandler
+                0x08000044                HardFault_Handler
+                0x08000044                SysTick_Handler
+                0x08000044                PendSV_Handler
+                0x08000044                NMI_Handler
+                0x08000044                UsageFault_Handler
+                0x08000044                Reset_Handler
+                0x08000044                SVC_Handler
+                0x08000044                BusFault_Handler
+                0x08000044                MemoryManagement_Handler
+ .text          0x080000d4       0x58 build/objs/src/Alarm.o
+                0x080000d4                alarmfsmTick
+ .text          0x0800012c       0x7c build/objs/src/High_Pressure_Detection.o
+                0x0800012c                highPressureDetectionfsmTick
+                0x08000194                highPressureDetected
+ .text          0x080001a8       0x28 build/objs/src/main.o
+                0x080001a8                setup
+                0x080001bc                main
+ .text          0x080001d0       0x68 build/objs/src/driver/Alarm_Actuator_Driver.o
+                0x080001d0                alarmActuatorInit
+                0x080001e8                alarmActuatorOn
+                0x08000210                alarmActuatorOff
+ .text          0x08000238       0xc4 build/objs/src/driver/driver.o
+                0x08000238                delay
+                0x0800025a                getPressureVal
+                0x08000270                setAlarmActuator
+                0x080002ac                gpioInit
+ .text          0x080002fc       0x4c build/objs/src/driver/Pressure_Sensor_Driver.o
+                0x080002fc                pressureSensorInit
+                0x08000314                pressureSensorRead
+ *(.rodata*)
+                0x08000348                        . = ALIGN (0x4)
+                0x08000348                        _E_text = .
+
+.glue_7         0x08000348        0x0
+ .glue_7        0x08000348        0x0 linker stubs
+
+.glue_7t        0x08000348        0x0
+ .glue_7t       0x08000348        0x0 linker stubs
+
+.vfp11_veneer   0x08000348        0x0
+ .vfp11_veneer  0x08000348        0x0 linker stubs
+
+.v4_bx          0x08000348        0x0
+ .v4_bx         0x08000348        0x0 linker stubs
+
+.iplt           0x08000348        0x0
+ .iplt          0x08000348        0x0 build/objs/startup/startup.o
+
+.rel.dyn        0x08000348        0x0
+ .rel.iplt      0x08000348        0x0 build/objs/startup/startup.o
+
+.data           0x20000000        0x0 load address 0x08000348
+                0x20000000                        _S_data = .
+ *(.data*)
+ .data          0x20000000        0x0 build/objs/startup/startup.o
+ .data          0x20000000        0x0 build/objs/src/Alarm.o
+ .data          0x20000000        0x0 build/objs/src/High_Pressure_Detection.o
+ .data          0x20000000        0x0 build/objs/src/main.o
+ .data          0x20000000        0x0 build/objs/src/driver/Alarm_Actuator_Driver.o
+ .data          0x20000000        0x0 build/objs/src/driver/driver.o
+ .data          0x20000000        0x0 build/objs/src/driver/Pressure_Sensor_Driver.o
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _E_data = .
+
+.igot.plt       0x20000000        0x0 load address 0x08000348
+ .igot.plt      0x20000000        0x0 build/objs/startup/startup.o
+
+.bss            0x20000000       0x10 load address 0x08000348
+                0x20000000                        _S_bss = .
+ *(.bss*)
+ .bss           0x20000000        0x0 build/objs/startup/startup.o
+ .bss           0x20000000        0x1 build/objs/src/Alarm.o
+ *fill*         0x20000001        0x3 
+ .bss           0x20000004        0x8 build/objs/src/High_Pressure_Detection.o
+ .bss           0x2000000c        0x0 build/objs/src/main.o
+ .bss           0x2000000c        0x1 build/objs/src/driver/Alarm_Actuator_Driver.o
+ .bss           0x2000000d        0x0 build/objs/src/driver/driver.o
+ .bss           0x2000000d        0x1 build/objs/src/driver/Pressure_Sensor_Driver.o
+                0x20000010                        . = ALIGN (0x4)
+ *fill*         0x2000000e        0x2 
+                0x20000010                        _E_bss = .
+                0x200003f8                        _stack_top = (. + 0x3e8)
+LOAD build/objs/startup/startup.o
+LOAD build/objs/src/Alarm.o
+LOAD build/objs/src/High_Pressure_Detection.o
+LOAD build/objs/src/main.o
+LOAD build/objs/src/driver/Alarm_Actuator_Driver.o
+LOAD build/objs/src/driver/driver.o
+LOAD build/objs/src/driver/Pressure_Sensor_Driver.o
+OUTPUT(build/output.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x00000000      0x847
+ .debug_info    0x00000000      0x1b8 build/objs/startup/startup.o
+ .debug_info    0x000001b8      0x123 build/objs/src/Alarm.o
+ .debug_info    0x000002db      0x16e build/objs/src/High_Pressure_Detection.o
+ .debug_info    0x00000449       0xdf build/objs/src/main.o
+ .debug_info    0x00000528      0x101 build/objs/src/driver/Alarm_Actuator_Driver.o
+ .debug_info    0x00000629      0x10c build/objs/src/driver/driver.o
+ .debug_info    0x00000735      0x112 build/objs/src/driver/Pressure_Sensor_Driver.o
+
+.debug_abbrev   0x00000000      0x50e
+ .debug_abbrev  0x00000000       0xdd build/objs/startup/startup.o
+ .debug_abbrev  0x000000dd       0xc4 build/objs/src/Alarm.o
+ .debug_abbrev  0x000001a1       0xc1 build/objs/src/High_Pressure_Detection.o
+ .debug_abbrev  0x00000262       0x73 build/objs/src/main.o
+ .debug_abbrev  0x000002d5       0xa7 build/objs/src/driver/Alarm_Actuator_Driver.o
+ .debug_abbrev  0x0000037c       0xc7 build/objs/src/driver/driver.o
+ .debug_abbrev  0x00000443       0xcb build/objs/src/driver/Pressure_Sensor_Driver.o
+
+.debug_aranges  0x00000000       0xe0
+ .debug_aranges
+                0x00000000       0x20 build/objs/startup/startup.o
+ .debug_aranges
+                0x00000020       0x20 build/objs/src/Alarm.o
+ .debug_aranges
+                0x00000040       0x20 build/objs/src/High_Pressure_Detection.o
+ .debug_aranges
+                0x00000060       0x20 build/objs/src/main.o
+ .debug_aranges
+                0x00000080       0x20 build/objs/src/driver/Alarm_Actuator_Driver.o
+ .debug_aranges
+                0x000000a0       0x20 build/objs/src/driver/driver.o
+ .debug_aranges
+                0x000000c0       0x20 build/objs/src/driver/Pressure_Sensor_Driver.o
+
+.debug_line     0x00000000      0x746
+ .debug_line    0x00000000      0x14d build/objs/startup/startup.o
+ .debug_line    0x0000014d       0xc3 build/objs/src/Alarm.o
+ .debug_line    0x00000210      0x174 build/objs/src/High_Pressure_Detection.o
+ .debug_line    0x00000384       0xcb build/objs/src/main.o
+ .debug_line    0x0000044f       0x97 build/objs/src/driver/Alarm_Actuator_Driver.o
+ .debug_line    0x000004e6      0x139 build/objs/src/driver/driver.o
+ .debug_line    0x0000061f      0x127 build/objs/src/driver/Pressure_Sensor_Driver.o
+
+.debug_str      0x00000000      0x456
+ .debug_str     0x00000000      0x456 build/objs/startup/startup.o
+                                0x1d5 (size before relaxing)
+ .debug_str     0x00000456        0x0 build/objs/src/Alarm.o
+                                0x1ef (size before relaxing)
+ .debug_str     0x00000456        0x0 build/objs/src/High_Pressure_Detection.o
+                                0x253 (size before relaxing)
+ .debug_str     0x00000456        0x0 build/objs/src/main.o
+                                0x1a8 (size before relaxing)
+ .debug_str     0x00000456        0x0 build/objs/src/driver/Alarm_Actuator_Driver.o
+                                0x1f2 (size before relaxing)
+ .debug_str     0x00000456        0x0 build/objs/src/driver/driver.o
+                                0x198 (size before relaxing)
+ .debug_str     0x00000456        0x0 build/objs/src/driver/Pressure_Sensor_Driver.o
+                                0x1ef (size before relaxing)
+
+.comment        0x00000000       0x45
+ .comment       0x00000000       0x45 build/objs/startup/startup.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/objs/src/Alarm.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/objs/src/High_Pressure_Detection.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/objs/src/main.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/objs/src/driver/Alarm_Actuator_Driver.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/objs/src/driver/driver.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 build/objs/src/driver/Pressure_Sensor_Driver.o
+                                 0x46 (size before relaxing)
+
+.ARM.attributes
+                0x00000000       0x2d
+ .ARM.attributes
+                0x00000000       0x2d build/objs/startup/startup.o
+ .ARM.attributes
+                0x0000002d       0x2d build/objs/src/Alarm.o
+ .ARM.attributes
+                0x0000005a       0x2d build/objs/src/High_Pressure_Detection.o
+ .ARM.attributes
+                0x00000087       0x2d build/objs/src/main.o
+ .ARM.attributes
+                0x000000b4       0x2d build/objs/src/driver/Alarm_Actuator_Driver.o
+ .ARM.attributes
+                0x000000e1       0x2d build/objs/src/driver/driver.o
+ .ARM.attributes
+                0x0000010e       0x2d build/objs/src/driver/Pressure_Sensor_Driver.o
+
+.debug_frame    0x00000000      0x250
+ .debug_frame   0x00000000       0x34 build/objs/startup/startup.o
+ .debug_frame   0x00000034       0x2c build/objs/src/Alarm.o
+ .debug_frame   0x00000060       0x4c build/objs/src/High_Pressure_Detection.o
+ .debug_frame   0x000000ac       0x48 build/objs/src/main.o
+ .debug_frame   0x000000f4       0x68 build/objs/src/driver/Alarm_Actuator_Driver.o
+ .debug_frame   0x0000015c       0xa0 build/objs/src/driver/driver.o
+ .debug_frame   0x000001fc       0x54 build/objs/src/driver/Pressure_Sensor_Driver.o
