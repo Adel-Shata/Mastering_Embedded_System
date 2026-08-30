@@ -74,13 +74,30 @@ typedef struct {
 
 The database uses a fixed-size array (`studentList[50]`) managed as a circular queue:
 
-```
-base (studentList[0])
-  ↓
-[Student] → [Student] → [Student] → ... → [Student]
-    ↑                                      ↓
-    └───────────── circular ───────────────┘
-tail (oldest)                          top (newest)
+```mermaid
+flowchart LR
+    BASE["base<br/>studentList[0]"]
+    S1["Student"]
+    S2["Student"]
+    S3["Student"]
+    SN["Student"]
+
+    BASE --> S1
+    S1 --> S2
+    S2 --> S3
+    S3 --> SN
+    SN -.->|wrap around| BASE
+
+    TAIL["tail<br/>oldest"] -.-> S1
+    TOP["top<br/>newest"] -.-> SN
+
+    style BASE fill:#1e40af,stroke:#3b82f6,color:#fff
+    style TAIL fill:#065f46,stroke:#10b981,color:#fff
+    style TOP fill:#92400e,stroke:#f59e0b,color:#fff
+    style S1 fill:#f3f4f6,stroke:#9ca3af,color:#1f2937
+    style S2 fill:#f3f4f6,stroke:#9ca3af,color:#1f2937
+    style S3 fill:#f3f4f6,stroke:#9ca3af,color:#1f2937
+    style SN fill:#f3f4f6,stroke:#9ca3af,color:#1f2937
 ```
 
 - **`base`**: Fixed pointer to `studentList[0]`
