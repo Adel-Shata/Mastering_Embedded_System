@@ -1,6 +1,6 @@
 # Mastering_Embedded_System
 
-## 📘 First Term ![In Progress](https://img.shields.io/badge/In%20Progress-40%25-yellow)
+## 📘 First Term ![In Progress](https://img.shields.io/badge/In%20Progress-100%25-brightgreen)
 
 - **Unit 1: Introduction** 
 
@@ -27,10 +27,10 @@
 ---
 <br>
   
-## 📙 Second Term ![Start Soon](https://img.shields.io/badge/Start%20Soon-0%25-red)
+## 📙 Second Term ![In Progress](https://img.shields.io/badge/In%20Progress-1%25-orange)
 
 - **Unit 6: MCU Fundamentals**  
-  ![Progress](https://img.shields.io/badge/0%25%20Completed-red)
+  ![Progress](https://img.shields.io/badge/1%25%20Completed-orange)
 
 - **Unit 7: MCU Essential Peripherals**  
   ![Progress](https://img.shields.io/badge/0%25%20Completed-red)
