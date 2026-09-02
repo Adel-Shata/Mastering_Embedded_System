@@ -30,13 +30,6 @@ The software is decomposed into four independent blocks, each implemented as a s
 | Sensor input | GPIOA PA0–PA7 (8-bit DIP-switch bank) |
 | Alarm output | PA13 (active-low LED) |
 
-**Assumptions:**
-- No sensor failure modelled.
-- No actuator failure modelled.
-- No power-cut or brown-out scenario modelled.
-- Pressure readings are instantaneous (no ADC conversion delay modelled).
-- Timing is approximate (busy-wait delay loops, not timer-based).
-
 ---
 
 ## System Architecture
