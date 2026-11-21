@@ -27,10 +27,10 @@
 ---
 <br>
   
-## 📙 Second Term ![In Progress](https://img.shields.io/badge/In%20Progress-1%25-orange)
+## 📙 Second Term ![In Progress](https://img.shields.io/badge/In%20Progress-25%25-orange)
 
 - **Unit 6: MCU Fundamentals**  
-  ![Progress](https://img.shields.io/badge/1%25%20Completed-orange)
+  ![Progress](https://img.shields.io/badge/100%25%20Completed-brightgreen)
 
 - **Unit 7: MCU Essential Peripherals**  
   ![Progress](https://img.shields.io/badge/0%25%20Completed-red)
