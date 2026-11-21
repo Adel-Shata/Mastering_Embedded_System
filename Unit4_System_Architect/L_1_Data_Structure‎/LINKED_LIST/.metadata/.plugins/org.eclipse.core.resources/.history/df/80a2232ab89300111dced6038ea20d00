@@ -1,0 +1,22 @@
+/*
+ ============================================================================
+ Name        : main.c
+ Author      : Adel Shata
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "LINKED_LIST.h"
+
+#define print(...) 	printf(__VA_ARGS__);\
+					fflush(stdin);\
+					fflush(stdout);
+
+int main(void) {
+#include <stdio.h>
+#include <stdlib.h>
+#include "LINKED_LIST_cfg.h"
+

@@ -1,0 +1,39 @@
+/*
+ * LINKED_LIST.h
+ *
+ *  Created on: 9 Aug 2026
+ *      Author: Adel Shata
+ */
+
+#ifndef LINKED_LIST_H_
+#define LINKED_LIST_H_
+
+#include "LINKED_LIST_cfg.h"
+#include "LINKED_LIST.h"
+
+struct NODE{
+	Element_DataType NodeData;
+	struct NODE *NodeNext;
+};
+
+
+typedef enum {
+	succeeded,
+	failed
+}LIST_Status_t;
+
+//Primary Functions ↓↓↓
+
+//Insert new Item in the list
+LIST_Status_t LIST_Insert(struct NODE **List, Element_DataType Item);
+
+//Deleting a certain element
+LIST_Status_t LIST_CDelete(struct NODE **List, unsigned int ItemIndex);
+
+//Deleting all the list's Items
+LIST_Status_t LIST_DeleteAll(struct NODE **List);
+
+//Getting the item's data in the list of the desired index
+LIST_Status_t LIST_GetNth(struct NODE *CurrentNode, Element_DataType *Item, unsigned int  ItemIndex);
+
+#endif /* LINKED_LIST_H_ */

@@ -1,0 +1,79 @@
+/*
+ ============================================================================
+ Name        : main.c
+ Author      : Adel Shata
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "LINKED_LIST.h"
+
+#define print(...) 	printf(__VA_ARGS__);\
+					fflush(stdin);\
+					fflush(stdout);
+
+
+	void PrintList(struct NODE const *List)
+	{
+	    struct NODE const *TempNode = List;
+
+	    print("List: ")
+
+	    while (NULL != TempNode)
+	    {
+	        print("%d", TempNode->NodeData)
+
+	        if (NULL != TempNode->NodeNext){
+	        	print(" -> ")
+	        }
+
+	        TempNode = TempNode->NodeNext;
+	    }
+
+	    print("\n")
+	}
+
+	int main(void)
+	{
+	    struct NODE *List = NULL;
+
+	    /* Insert 5 elements */
+	    LIST_Insert(&List, 10);
+	    LIST_Insert(&List, 20);
+	    LIST_Insert(&List, 30);
+	    LIST_Insert(&List, 40);
+	    LIST_Insert(&List, 50);
+
+	    PrintList(List);
+
+	    /* Delete first element */
+	    print("\nDeleting first element...\n")
+
+	    LIST_CDelete(&List, 0);
+
+	    PrintList(List);
+
+	    /* Delete last element */
+	    print("\nDeleting last element...\n")
+
+	    LIST_CDelete(&List, 3);
+
+	    PrintList(List);
+
+	    /* Delete middle element */
+	    print("\nDeleting middle element...\n")
+
+	    LIST_CDelete(&List, 1);
+
+	    PrintList(List);
+
+	    LIST_Insert(&List, 60);
+	    LIST_Insert(&List, 70);
+
+	    PrintList(List);
+
+	    return EXIT_SUCCESS;
+	}

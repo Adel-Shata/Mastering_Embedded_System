@@ -1,0 +1,299 @@
+01:29:35 **** Incremental Build of configuration Release for project main ****
+Info: Internal Builder is used for build
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -O3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+01:29:38 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+01:50:48 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:59:22: error: implicit declaration of function 'LIST_Length_Recursive' [-Wimplicit-function-declaration]
+   59 |             length = LIST_Length_Recursive(&List);
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+..\src\main.c:84:22: error: implicit declaration of function 'LIST_Length'; did you mean 'LIST_GetNth'? [-Wimplicit-function-declaration]
+   84 |             length = LIST_Length(&List);
+      |                      ^~~~~~~~~~~
+      |                      LIST_GetNth
+01:51:57 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+..\src\LINKED_LIST.c: In function 'LIST_Length_Recursive':
+..\src\LINKED_LIST.c:32:13: error: used struct type value where scalar is required
+   32 |         if( *List )
+      |             ^
+..\src\LINKED_LIST.c:33:60: error: invalid type argument of '->' (have 'struct NODE')
+   33 |                 return ( 1 + LIST_Length_Recursive( (*List)->NodeNext ) );
+      |                                                            ^~
+01:53:07 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+..\src\LINKED_LIST.c: In function 'LIST_Length_Recursive':
+..\src\LINKED_LIST.c:32:13: error: used struct type value where scalar is required
+   32 |         if( *List )
+      |             ^
+..\src\LINKED_LIST.c:33:60: error: invalid type argument of '->' (have 'struct NODE')
+   33 |                 return ( 1 + LIST_Length_Recursive( (*List)->NodeNext ) );
+      |                                                            ^~
+..\src\LINKED_LIST.c: At top level:
+..\src\LINKED_LIST.c:30:21: warning: 'LIST_Length_Recursive' defined but not used [-Wunused-function]
+   30 | static unsigned int LIST_Length_Recursive(struct NODE *List){
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+01:54:01 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+..\src\LINKED_LIST.c: In function 'LIST_Length_Recursive':
+..\src\LINKED_LIST.c:32:13: error: used struct type value where scalar is required
+   32 |         if( *List )
+      |             ^
+..\src\LINKED_LIST.c:33:60: error: invalid type argument of '->' (have 'struct NODE')
+   33 |                 return ( 1 + LIST_Length_Recursive( (*List)->NodeNext ) );
+      |                                                            ^~
+01:55:17 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+..\src\LINKED_LIST.c:30:21: warning: 'LIST_Length_Recursive' defined but not used [-Wunused-function]
+   30 | static unsigned int LIST_Length_Recursive(struct NODE *List){
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:59:44: error: passing argument 1 of 'LIST_Length_Recursive' from incompatible pointer type [-Wincompatible-pointer-types]
+   59 |             length = LIST_Length_Recursive(&List);
+      |                                            ^~~~~
+      |                                            |
+      |                                            struct NODE **
+In file included from ..\src\main.c:12:
+..\src\LINKED_LIST.h:43:56: note: expected 'struct NODE *' but argument is of type 'struct NODE **'
+   43 | static unsigned int LIST_Length_Recursive(struct NODE *List);
+      |                                           ~~~~~~~~~~~~~^~~~
+..\src\main.c:84:34: error: passing argument 1 of 'LIST_Length' from incompatible pointer type [-Wincompatible-pointer-types]
+   84 |             length = LIST_Length(&List);
+      |                                  ^~~~~
+      |                                  |
+      |                                  struct NODE **
+..\src\LINKED_LIST.h:40:46: note: expected 'struct NODE *' but argument is of type 'struct NODE **'
+   40 | static unsigned int LIST_Length(struct NODE *List);
+      |                                 ~~~~~~~~~~~~~^~~~
+..\src\LINKED_LIST.h: At top level:
+..\src\LINKED_LIST.h:40:21: warning: 'LIST_Length' used but never defined
+   40 | static unsigned int LIST_Length(struct NODE *List);
+      |                     ^~~~~~~~~~~
+..\src\LINKED_LIST.h:43:21: warning: 'LIST_Length_Recursive' used but never defined
+   43 | static unsigned int LIST_Length_Recursive(struct NODE *List);
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+01:56:07 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:59:44: error: passing argument 1 of 'LIST_Length_Recursive' from incompatible pointer type [-Wincompatible-pointer-types]
+   59 |             length = LIST_Length_Recursive(&List);
+      |                                            ^~~~~
+      |                                            |
+      |                                            struct NODE **
+In file included from ..\src\main.c:12:
+..\src\LINKED_LIST.h:43:49: note: expected 'struct NODE *' but argument is of type 'struct NODE **'
+   43 | unsigned int LIST_Length_Recursive(struct NODE *List);
+      |                                    ~~~~~~~~~~~~~^~~~
+..\src\main.c:84:34: error: passing argument 1 of 'LIST_Length' from incompatible pointer type [-Wincompatible-pointer-types]
+   84 |             length = LIST_Length(&List);
+      |                                  ^~~~~
+      |                                  |
+      |                                  struct NODE **
+..\src\LINKED_LIST.h:40:39: note: expected 'struct NODE *' but argument is of type 'struct NODE **'
+   40 | unsigned int LIST_Length(struct NODE *List);
+      |                          ~~~~~~~~~~~~~^~~~
+01:56:33 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:59:22: error: implicit declaration of function 'LIST_Length_Recursive' [-Wimplicit-function-declaration]
+   59 |             length = LIST_Length_Recursive(&List);
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+..\src\main.c:84:22: error: implicit declaration of function 'LIST_Length'; did you mean 'LIST_GetNth'? [-Wimplicit-function-declaration]
+   84 |             length = LIST_Length(&List);
+      |                      ^~~~~~~~~~~
+      |                      LIST_GetNth
+01:56:44 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:59:22: error: implicit declaration of function 'LIST_Length_Recursive' [-Wimplicit-function-declaration]
+   59 |             length = LIST_Length_Recursive(&List);
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+..\src\main.c:84:22: error: implicit declaration of function 'LIST_Length'; did you mean 'LIST_GetNth'? [-Wimplicit-function-declaration]
+   84 |             length = LIST_Length(&List);
+      |                      ^~~~~~~~~~~
+      |                      LIST_GetNth
+01:56:55 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:59:22: error: implicit declaration of function 'LIST_Length_Recursive' [-Wimplicit-function-declaration]
+   59 |             length = LIST_Length_Recursive(List);
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+..\src\main.c:84:22: error: implicit declaration of function 'LIST_Length'; did you mean 'LIST_GetNth'? [-Wimplicit-function-declaration]
+   84 |             length = LIST_Length(List);
+      |                      ^~~~~~~~~~~
+      |                      LIST_GetNth
+01:57:34 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:59:22: error: implicit declaration of function 'LIST_Length_Recursive' [-Wimplicit-function-declaration]
+   59 |             length = LIST_Length_Recursive(List);
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+..\src\main.c:84:22: error: implicit declaration of function 'LIST_Length'; did you mean 'LIST_GetNth'? [-Wimplicit-function-declaration]
+   84 |             length = LIST_Length(List);
+      |                      ^~~~~~~~~~~
+      |                      LIST_GetNth
+01:57:41 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+01:58:07 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+In file included from ..\src\main.c:12:
+..\src\LINKED_LIST.h:40:21: warning: 'LIST_Length' used but never defined
+   40 | static unsigned int LIST_Length(struct NODE *List);
+      |                     ^~~~~~~~~~~
+..\src\LINKED_LIST.h:43:21: warning: 'LIST_Length_Recursive' used but never defined
+   43 | static unsigned int LIST_Length_Recursive(struct NODE *List);
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+..\src\LINKED_LIST.c:30:21: warning: 'LIST_Length_Recursive' defined but not used [-Wunused-function]
+   30 | static unsigned int LIST_Length_Recursive(struct NODE *List){
+      |                     ^~~~~~~~~~~~~~~~~~~~~
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+C:/Tools/TOOLCHAIN/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src\main.o: in function `main':
+D:\Projeccts\C_Programming\LINKED_LIST\main\Debug/../src/main.c:59:(.text+0x1f6): undefined reference to `LIST_Length_Recursive'
+C:/Tools/TOOLCHAIN/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:\Projeccts\C_Programming\LINKED_LIST\main\Debug/../src/main.c:84:(.text+0x34a): undefined reference to `LIST_Length'
+collect2.exe: error: ld returned 1 exit status
+01:58:54 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+..\src\LINKED_LIST.c:30:14: warning: 'LIST_Length_Recursive' defined but not used [-Wunused-function]
+   30 | unsigned int LIST_Length_Recursive(struct NODE *List){
+      |              ^~~~~~~~~~~~~~~~~~~~~
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+C:/Tools/TOOLCHAIN/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src\main.o: in function `main':
+D:\Projeccts\C_Programming\LINKED_LIST\main\Debug/../src/main.c:59:(.text+0x1f6): undefined reference to `LIST_Length_Recursive'
+C:/Tools/TOOLCHAIN/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/16.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:\Projeccts\C_Programming\LINKED_LIST\main\Debug/../src/main.c:84:(.text+0x34a): undefined reference to `LIST_Length'
+collect2.exe: error: ld returned 1 exit status
+01:59:04 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+Info: Nothing to build for main
+02:16:11 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:100:13: error: implicit declaration of function 'LIST_GetNth_FromEnd' [-Wimplicit-function-declaration]
+  100 |             LIST_GetNth_FromEnd()( List, &Item , 0 );
+      |             ^~~~~~~~~~~~~~~~~~~
+..\src\main.c:100:13: error: called object is not a function or function pointer
+..\src\main.c:108:13: error: called object is not a function or function pointer
+  108 |             LIST_GetNth_FromEnd()( List, &Item , 4 );
+      |             ^~~~~~~~~~~~~~~~~~~
+..\src\main.c:116:13: error: called object is not a function or function pointer
+  116 |             LIST_GetNth_FromEnd()( List, &Item , 1 );
+      |             ^~~~~~~~~~~~~~~~~~~
+02:16:39 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:100:13: error: too few arguments to function 'LIST_GetNth_FromEnd'; expected 3, have 0
+  100 |             LIST_GetNth_FromEnd()( List, &Item , 0 );
+      |             ^~~~~~~~~~~~~~~~~~~
+In file included from ..\src\main.c:12:
+..\src\LINKED_LIST.h:40:15: note: declared here
+   40 | LIST_Status_t LIST_GetNth_FromEnd(struct NODE *CurrentNode, Element_DataType *Item, unsigned int  ItemIndex);
+      |               ^~~~~~~~~~~~~~~~~~~
+..\src\main.c:108:13: error: too few arguments to function 'LIST_GetNth_FromEnd'; expected 3, have 0
+  108 |             LIST_GetNth_FromEnd()( List, &Item , 4 );
+      |             ^~~~~~~~~~~~~~~~~~~
+..\src\LINKED_LIST.h:40:15: note: declared here
+   40 | LIST_Status_t LIST_GetNth_FromEnd(struct NODE *CurrentNode, Element_DataType *Item, unsigned int  ItemIndex);
+      |               ^~~~~~~~~~~~~~~~~~~
+..\src\main.c:116:13: error: too few arguments to function 'LIST_GetNth_FromEnd'; expected 3, have 0
+  116 |             LIST_GetNth_FromEnd()( List, &Item , 1 );
+      |             ^~~~~~~~~~~~~~~~~~~
+..\src\LINKED_LIST.h:40:15: note: declared here
+   40 | LIST_Status_t LIST_GetNth_FromEnd(struct NODE *CurrentNode, Element_DataType *Item, unsigned int  ItemIndex);
+      |               ^~~~~~~~~~~~~~~~~~~
+02:17:17 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+Info: Nothing to build for main
+02:36:26 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+Info: Nothing to build for main
+02:39:14 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+Info: Nothing to build for main
+02:40:08 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+Info: Nothing to build for main
+03:00:53 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+..\src\LINKED_LIST.c: In function 'LIST_GetMth_Ref':
+..\src\LINKED_LIST.c:173:22: error: assignment to 'unsigned int *' from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+  173 |                 Item = CurrentNode->NodeData;
+      |                      ^
+03:01:09 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+Info: Nothing to build for main
+03:03:41 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+Info: Nothing to build for main
+03:43:56 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+Info: Nothing to build for main
+03:44:46 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+Info: Nothing to build for main
+Info: Nothing to build for main
+Info: Nothing to build for main
+03:52:41 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+Info: Nothing to build for main
+03:55:05 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+Info: Nothing to build for main
+04:00:55 **** Incremental Build of configuration Debug for project main ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LINKED_LIST.o" "..\\src\\LINKED_LIST.c" 
+gcc -o main.exe "src\\LINKED_LIST.o" "src\\main.o" 
+Info: Nothing to build for main
